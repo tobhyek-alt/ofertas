@@ -37,13 +37,11 @@ jobs:
         if: github.event_name != 'push' || hashFiles('catalogo/index.json') == ''
         continue-on-error: true
         env:
-          SYSCOM_TOKEN: ${{ secrets.SYSCOM_TOKEN }}
-          SYSCOM_CLIENT_ID: ${{ secrets.SYSCOM_CLIENT_ID }}
-          SYSCOM_CLIENT_SECRET: ${{ secrets.SYSCOM_CLIENT_SECRET }}
+          TVC_TOKEN: ${{ secrets.TVC_TOKEN }}
           MARGEN: ${{ vars.MARGEN }}
         run: |
           rm -rf catalogo_nuevo
-          python3 tools/sync_syscom.py catalogo_nuevo
+          python3 tools/sync_tvc.py catalogo_nuevo
           rm -rf catalogo && mv catalogo_nuevo catalogo
 
       - name: Guardar catálogo
