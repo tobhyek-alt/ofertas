@@ -57,6 +57,7 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
 .cmp a:hover{color:var(--ink)}
 .cmp .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
 .cmp s{font-family:"JetBrains Mono",monospace}
+.catn{font-size:13px;color:var(--muted);text-align:center}
 .add{font:inherit;font-weight:600;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:11px;cursor:pointer;margin-top:auto}
 .add.in{background:var(--ink)}
 .empty{color:var(--muted);text-align:center;padding:40px}
@@ -128,7 +129,7 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
 <div class="toast" id="toast" hidden></div>
 
 <script>
-const CATS = {cam:'Cámaras', acc:'Control de acceso', ptp:'Enlaces punto a punto', router:'Routers y módems', mk:'MikroTik', net:'Redes y hogar', nvr:'Grabadores NVR', kit:'Kits de cámaras', hdd:'Discos duros', solar:'Cámaras solares', lockcode:'Cerraduras con código', lockelec:'Cerraduras eléctricas', mag:'Chapas magnéticas y electroimanes', tech:'Tecnología'};
+const CATS = {cam:'Cámaras', acc:'Control de acceso', ptp:'Enlaces punto a punto', router:'Routers y módems', mk:'MikroTik', net:'Redes y hogar', nvr:'Grabadores NVR', kit:'Kits de cámaras', hdd:'Discos duros', solar:'Cámaras solares', lockcode:'Cerraduras con código', lockelec:'Cerraduras eléctricas', mag:'Chapas magnéticas y electroimanes', dvr:'Grabadores DVR', utp:'Cable UTP', antena:'Antenas', radio:'Radios', tech:'Tecnología'};
 const MK = {ml:{n:'Mercado Libre',c:'var(--ml)'}, amz:{n:'Amazon',c:'var(--amz)'}};
 const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="#e63956" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg>';
 const $ = id => document.getElementById(id);
@@ -137,24 +138,25 @@ let DATA=null, P=[], state={cat:'all', q:'', sort:'save'};
 let cart = (()=>{ try{ return JSON.parse(localStorage.getItem('cart')||'{}'); }catch(e){ return {}; } })();
 const saveCart = () => { try{ localStorage.setItem('cart', JSON.stringify(cart)); }catch(e){} };
 
-function lowest(p){ return Math.min(...Object.values(p.market).map(o=>o.p)); }
+function lowest(p){ const v=Object.values(p.market||{}).map(o=>o.p); return v.length?Math.min(...v):0; }
+const ratio = p => p.catalog||!lowest(p) ? -1 : p.save/lowest(p);
 function card(p){
   const inCart = cart[p.id] > 0;
-  const cmp = Object.entries(p.market).map(([s,o])=>`<a href="${o.u}" target="_blank" rel="noopener"><span><span class="dot" style="background:${MK[s].c}"></span>En ${MK[s].n}</span><s>${money(o.p)}</s></a>`).join('');
+  const cmp = p.catalog ? '<div class="cmp catn">Precio especial de catálogo · consulta existencias</div>' : Object.entries(p.market).map(([s,o])=>`<a href="${o.u}" target="_blank" rel="noopener"><span><span class="dot" style="background:${MK[s].c}"></span>En ${MK[s].n}</span><s>${money(o.p)}</s></a>`).join('');
   return `<article class="card">
     <div class="pic">${p.img?`<img src="${p.img}" alt="${p.name}" loading="lazy">`:ICON}</div>
-    <span class="save">Ahorras ${money(Math.round(p.save))}</span>
+    ${p.catalog?'':`<span class="save">Ahorras ${money(Math.round(p.save))}</span>`}
     <div><div class="cat">${CATS[p.cat]||''}</div><h3>${p.name}</h3></div>
     <div class="spec">${p.spec}</div>
     <div class="price"><span class="ours">${money(p.price)}</span><span class="lbl">nuestro precio</span></div>
-    <div class="cmp">${cmp}</div>
+    ${p.catalog?cmp:`<div class="cmp">${cmp}</div>`}
     <button class="add ${inCart?'in':''}" data-id="${p.id}">${inCart?`✓ En tu pedido (${cart[p.id]}) · agregar`:'Agregar al pedido'}</button>
   </article>`;
 }
 function render(){
   const q=state.q.trim().toLowerCase();
   let list=P.filter(p=>state.cat==='all'||p.cat===state.cat).filter(p=>!q||(p.name+' '+p.spec+' '+(CATS[p.cat]||'')).toLowerCase().includes(q));
-  const by={save:(a,b)=>b.save/lowest(b)-a.save/lowest(a), low:(a,b)=>a.price-b.price, high:(a,b)=>b.price-a.price};
+  const by={save:(a,b)=>ratio(b)-ratio(a), low:(a,b)=>a.price-b.price, high:(a,b)=>b.price-a.price};
   list.sort(by[state.sort]);
   $('grid').innerHTML = list.length ? list.map(card).join('') : '<div class="empty">No encontramos productos con esa búsqueda.</div>';
   renderCart();
@@ -165,13 +167,13 @@ function renderCart(){
   $('cartCount').textContent=n;
   if (!ids.length){ $('items').innerHTML='<p class="empty">Tu pedido está vacío. Agrega productos para armar tu cotización.</p>'; $('tot').innerHTML=''; return; }
   let total=0, saved=0;
-  $('items').innerHTML=ids.map(id=>{ const p=P.find(x=>x.id===id); total+=p.price*cart[id]; saved+=p.save*cart[id];
+  $('items').innerHTML=ids.map(id=>{ const p=P.find(x=>x.id===id); total+=p.price*cart[id]; saved+=(p.save||0)*cart[id];
     return `<div class="it"><div class="th">${p.img?`<img src="${p.img}" alt="">`:ICON}</div><div><div class="nm">${p.name}</div><div class="pp">${money(p.price)} c/u</div></div>
       <div class="qty"><button data-q="${id}" data-d="-1" aria-label="Quitar uno">−</button><span>${cart[id]}</span><button data-q="${id}" data-d="1" aria-label="Agregar uno">+</button></div></div>`; }).join('');
   const wa=(DATA.store.whatsapp||'').replace(/\D/g,'');
   const msg=orderText(ids,total);
   $('tot').innerHTML=`<div class="row big"><span>Total</span><span>${money(+total.toFixed(2))}</span></div>
-    <div class="row good"><span>Ahorras contra marketplaces</span><span>${money(Math.round(saved))}</span></div>
+    ${saved>0?`<div class="row good"><span>Ahorras contra marketplaces</span><span>${money(Math.round(saved))}</span></div>`:''}
     ${wa?`<a class="send" href="https://wa.me/${wa}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>`:''}
     <button class="send ${wa?'alt':''}" id="copyOrder">${wa?'Copiar pedido':'Copiar pedido para enviarlo'}</button>
     ${wa?`<div class="row" style="justify-content:center">WhatsApp: ${DATA.store.whatsapp}</div>`:''}`;
@@ -188,7 +190,7 @@ function boot(){
   if (DATA.store.note) $('note').textContent=DATA.store.note+' '+$('note').textContent;
   $('stamp').textContent='Precios comparados el '+DATA.updatedLabel;
   $('kN').textContent=P.length;
-  const avg=P.length?P.reduce((s,p)=>s+p.save/lowest(p),0)/P.length:0;
+  const C=P.filter(p=>!p.catalog); const avg=C.length?C.reduce((s,p)=>s+p.save/lowest(p),0)/C.length:0;
   $('kAvg').textContent=Math.round(avg*100)+'%';
   const cats=[...new Set(P.map(p=>p.cat))];
   $('chips').innerHTML=[['all','Todo'],...cats.map(c=>[c,CATS[c]])].map(([k,v])=>`<button class="chip" data-cat="${k}" aria-pressed="${k==='all'}">${v}</button>`).join('');
