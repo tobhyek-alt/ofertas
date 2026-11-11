@@ -34,7 +34,7 @@ jobs:
 
       - name: Descargar catálogo con existencia
         id: sync
-        if: github.event_name != 'push' || hashFiles('catalogo/index.json') == ''
+        if: vars.TVC_ACTIVO == '1' && (github.event_name != 'push' || hashFiles('catalogo/index.json') == '')
         continue-on-error: true
         env:
           TVC_TOKEN: ${{ secrets.TVC_TOKEN }}
