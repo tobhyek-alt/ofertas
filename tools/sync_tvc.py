@@ -24,10 +24,47 @@ def log(*a):
     print(*a, flush=True)
 
 
-def get(path, params=None, intentos=6):
-    tok = (os.environ.get("TVC_TOKEN") or "").strip()
+def limpiar(v):
+    v = (v or "").strip().strip('"').strip("'").strip()
+    if v.lower().startswith("bearer "):
+        v = v[7:].strip()
+    return v
+
+
+TOKEN = None
+
+
+def candidatos():
+    tok, tid = limpiar(os.environ.get("TVC_TOKEN")), limpiar(os.environ.get("TVC_TOKEN_ID"))
     if not tok:
         raise SystemExit("Falta el secreto TVC_TOKEN")
+    c = [tok]
+    if tid and "|" not in tok:
+        c.append(f"{tid}|{tok}")      # formato id|token
+        c.append(f"{tok}|{tid}")      # por si se capturaron al revés
+    return c
+
+
+def autenticar():
+    global TOKEN
+    for i, t in enumerate(candidatos()):
+        req = urllib.request.Request(BASE + "/exchange-rates", headers={
+            "Authorization": "Bearer " + t, "Accept": "application/json", "User-Agent": "catalogo-ofertas/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=60):
+                TOKEN = t
+                print(f"::notice::Token aceptado (formato {i + 1})", flush=True)
+                return
+        except urllib.error.HTTPError as e:
+            if e.code != 401:
+                raise SystemExit(f"Error {e.code} al validar el token")
+        time.sleep(PAUSA)
+    raise SystemExit("TVC rechazó el token (401 Unauthenticated). Revisa que el secreto TVC_TOKEN tenga el token completo"
+                     " y, si TVC te dio un ID aparte, guárdalo en el secreto TVC_TOKEN_ID.")
+
+
+def get(path, params=None, intentos=6):
+    tok = TOKEN
     url = BASE + path + ("?" + urllib.parse.urlencode(params, doseq=True) if params else "")
     hdr = {"Authorization": "Bearer " + tok, "Accept": "application/json",
            "User-Agent": "catalogo-ofertas/1.0"}
@@ -132,6 +169,7 @@ def nombre(p):
 
 
 def main():
+    autenticar()
     tc = tipo_cambio()
     log(f"Tipo de cambio: {tc}")
     cats, vistos, pagina, ultima = {}, set(), 1, None

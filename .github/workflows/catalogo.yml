@@ -38,6 +38,7 @@ jobs:
         continue-on-error: true
         env:
           TVC_TOKEN: ${{ secrets.TVC_TOKEN }}
+          TVC_TOKEN_ID: ${{ secrets.TVC_TOKEN_ID }}
           MARGEN: ${{ vars.MARGEN }}
         run: |
           rm -rf catalogo_nuevo
