@@ -74,6 +74,7 @@ def tipo_cambio():
         r = r[0]
     if isinstance(r, dict):
         r = next((v for v in r.values() if num(v)), None)
+    print(f"::notice::exchange-rates -> {str(r)[:120]}", flush=True)
     tc = num(r)
     if not tc or not (10 < tc < 40):
         raise SystemExit(f"Tipo de cambio inesperado: {r!r}")
@@ -138,6 +139,11 @@ def main():
               "withCategoryBreadcrumb": "true", "perPage": POR_PAGINA}
     while True:
         r = get("/products", dict(params, page=pagina))
+        if pagina == 1:
+            muestra = (r.get("data") or [{}])[0] if isinstance(r, dict) else (r or [{}])[0]
+            print("::notice::products keys=" + ",".join(sorted(r.keys()) if isinstance(r, dict) else ["lista"])
+                  + " | producto=" + ",".join(sorted(muestra.keys()))[:600]
+                  + f" | precio={muestra.get('distributor_price')!r} lista={muestra.get('list_price')!r} moneda={muestra.get('currency')!r} inv={muestra.get('total_inventories')!r}", flush=True)
         datos = r.get("data") if isinstance(r, dict) else r
         if not datos:
             break
@@ -198,4 +204,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit as e:
+        if e.code not in (None, 0):
+            # aparece como anotación visible en GitHub (sin datos sensibles)
+            print(f"::error::{e.code}", flush=True)
+        raise
+    except Exception as e:
+        print(f"::error::{type(e).__name__}: {str(e)[:300]}", flush=True)
+        raise
