@@ -97,6 +97,7 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
       <h1>Más barato que en <em>Mercado Libre</em> y <em>Amazon</em></h1>
       <p>Cámaras, control de acceso, enlaces inalámbricos, routers y MikroTik. Junto a cada precio te mostramos lo que cuesta hoy en Mercado Libre y Amazon, para que compares tú mismo.</p>
       <div class="stamp" id="stamp"></div>
+      <a id="fullCat" href="catalogo.html" hidden style="display:inline-block;margin-top:14px;background:#fff;color:#15171c;border-radius:999px;padding:10px 16px;font-weight:700;text-decoration:none">Ver catálogo completo →</a>
     </div>
     <div class="pill">
       <div><div class="k">Productos en oferta</div><div class="v" id="kN">0</div></div>
@@ -204,6 +205,7 @@ function boot(){
   $('drawer').onclick=e=>{ if(e.target.id==='drawer') $('drawer').hidden=true; };
   render();
 }
+fetch('catalogo/index.json').then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.total){ const l=$('fullCat'); l.hidden=false; l.textContent=`Ver catálogo completo: ${d.total.toLocaleString('es-MX')} productos →`; } }).catch(()=>{});
 fetch('client.json?v='+Date.now()).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
   .then(d=>{DATA=d; P=d.products; boot();})
   .catch(e=>{$('grid').innerHTML=`<div class="err">No se pudieron cargar los precios (${e.message}). Recarga la página.</div>`;});

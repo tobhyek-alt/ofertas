@@ -1,0 +1,70 @@
+name: Catálogo y publicación
+
+on:
+  schedule:
+    - cron: "17 12 * * *"   # 6:17 a.m. hora del centro de México
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Recuperar último catálogo
+        uses: actions/cache/restore@v4
+        with:
+          path: catalogo
+          key: catalogo-${{ github.run_id }}
+          restore-keys: catalogo-
+
+      - name: Descargar catálogo con existencia
+        id: sync
+        if: github.event_name != 'push' || hashFiles('catalogo/index.json') == ''
+        continue-on-error: true
+        env:
+          SYSCOM_TOKEN: ${{ secrets.SYSCOM_TOKEN }}
+          SYSCOM_CLIENT_ID: ${{ secrets.SYSCOM_CLIENT_ID }}
+          SYSCOM_CLIENT_SECRET: ${{ secrets.SYSCOM_CLIENT_SECRET }}
+          MARGEN: ${{ vars.MARGEN }}
+        run: |
+          rm -rf catalogo_nuevo
+          python3 tools/sync_syscom.py catalogo_nuevo
+          rm -rf catalogo && mv catalogo_nuevo catalogo
+
+      - name: Guardar catálogo
+        if: steps.sync.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: catalogo
+          key: catalogo-${{ github.run_id }}
+
+      - name: Armar sitio
+        run: |
+          mkdir -p _site
+          cp index.html catalogo.html client.json .nojekyll _site/ 2>/dev/null || true
+          cp -r img _site/
+          if [ -f catalogo/index.json ]; then cp -r catalogo _site/; fi
+          # nunca publicar archivos internos
+          test ! -e _site/data.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

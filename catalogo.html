@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo completo · seguridad, redes y tecnología</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#15171c; --muted:#6b7080; --line:#e6e2d8;
+  --accent:#e63956; --accent-ink:#fff; --good:#1f9d55; --good-bg:#e8f6ee; --soft:#f1eee6;
+  --ml:#f5d000; --amz:#ff9900;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:24px 18px 120px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand i{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-style:normal;font-size:16px}
+.cartbtn{font:inherit;font-weight:600;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 16px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.cartbtn b{background:var(--accent);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
+.hero{background:var(--ink);color:#fff;border-radius:24px;padding:34px 30px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:end;margin-bottom:22px;position:relative;overflow:hidden}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding:26px 22px}}
+.hero h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:1.02;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:#ff7a90}
+.hero p{margin:12px 0 0;color:#c9ccd6;font-size:16px;line-height:1.5;max-width:520px}
+.hero .stamp{font-family:"JetBrains Mono",monospace;font-size:12px;color:#9aa0b0;margin-top:14px}
+.hero .pill{display:flex;flex-direction:column;gap:10px}
+.pill > div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px}
+.pill .k{font-size:12px;color:#9aa0b0}
+.pill .v{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:22px;margin-top:2px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+@media (max-width:700px){.chips{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:2px}}
+.chip{font:inherit;font-size:14px;white-space:nowrap;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.search{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px}
+.search input{flex:1;background:none;border:0;color:var(--ink);font:inherit;font-size:14px;padding:10px 0;outline:none}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px;position:relative}
+.pic{aspect-ratio:4/3;max-height:210px;border-radius:14px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid var(--soft)}
+.pic img{max-width:80%;max-height:85%;object-fit:contain}
+.pic svg{width:64px;height:64px}
+.save{position:absolute;top:22px;left:22px;background:var(--good);color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:5px 10px}
+.cat{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card h3{margin:2px 0 0;font-size:17px;line-height:1.2}
+.spec{color:var(--muted);font-size:13px;line-height:1.4}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price .ours{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:28px}
+.price .lbl{font-size:12px;color:var(--muted)}
+.cmp{display:flex;flex-direction:column;gap:4px;background:var(--soft);border-radius:12px;padding:8px 10px}
+.cmp a{display:flex;justify-content:space-between;align-items:center;font-size:13px;text-decoration:none;color:var(--muted)}
+.cmp a:hover{color:var(--ink)}
+.cmp .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.cmp s{font-family:"JetBrains Mono",monospace}
+.catn{font-size:13px;color:var(--muted);text-align:center}
+.add{font:inherit;font-weight:600;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:11px;cursor:pointer;margin-top:auto}
+.add.in{background:var(--ink)}
+.empty{color:var(--muted);text-align:center;padding:40px}
+.note{margin-top:22px;color:var(--muted);font-size:13px;line-height:1.6;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+/* carrito */
+.drawer{position:fixed;inset:0;background:rgba(10,12,17,.45);display:flex;justify-content:flex-end;z-index:20}
+.panel{background:var(--card);width:min(420px,100%);height:100%;display:flex;flex-direction:column;padding:18px}
+.panel h2{margin:0 0 12px;font-size:20px;display:flex;justify-content:space-between;align-items:center}
+.x{font:inherit;background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted)}
+.items{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.it{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.it .th{width:52px;height:52px;border-radius:10px;border:1px solid var(--soft);display:grid;place-items:center;overflow:hidden}
+.it .th img{max-width:90%;max-height:90%}
+.it .nm{font-size:14px;font-weight:500}
+.it .pp{font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{font:inherit;width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.tot{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.tot .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+.tot .row.big{color:var(--ink);font-weight:700;font-size:18px}
+.tot .row.good{color:var(--good);font-weight:600}
+.send{font:inherit;font-weight:700;border:0;border-radius:12px;padding:13px;cursor:pointer;background:#25d366;color:#08331a;text-align:center;text-decoration:none;display:block}
+.send.alt{background:var(--ink);color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;z-index:30}
+.err{background:#fff0f2;border:1px solid #f3c2cb;border-radius:14px;padding:14px;color:#9b1c33}
+
+.mini{background:var(--ink);color:#fff;border-radius:22px;padding:22px 24px;margin-bottom:18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px}
+.mini h1{margin:0;font-size:clamp(24px,3.6vw,38px);letter-spacing:-.02em;line-height:1.05}
+.mini p{margin:8px 0 0;color:#c9ccd6;font-size:15px}
+.mini a{color:#ff9aac;font-weight:600;text-decoration:none;white-space:nowrap}
+.card h3{font-size:15px;font-weight:500}
+.mo{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted)}
+.stock{font-size:12px;color:var(--good);font-weight:600}
+.more{display:block;margin:18px auto 0;font:inherit;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:11px 22px;cursor:pointer}
+.hint{color:var(--muted);font-size:14px;margin:0 0 12px}
+.ph{font-size:40px;color:#c8c3b6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><i>★</i><span id="storeName">Catálogo completo</span></div>
+    <button class="cartbtn" id="openCart">Mi pedido <b id="cartCount">0</b></button>
+  </header>
+  <section class="mini">
+    <div><h1>Catálogo completo</h1><p id="sub">Cargando productos con existencia…</p></div>
+    <a href="./">← Ver ofertas comparadas</a>
+  </section>
+  <div class="bar">
+    <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Busca por producto, marca o modelo"></label>
+    <select id="sort" aria-label="Ordenar">
+      <option value="rel">Orden del catálogo</option>
+      <option value="low">Precio: menor a mayor</option>
+      <option value="high">Precio: mayor a menor</option>
+    </select>
+  </div>
+  <div class="chips" id="chips" style="margin-bottom:16px"></div>
+  <p class="hint" id="hint"></p>
+  <div class="grid" id="grid"></div>
+  <button class="more" id="more" hidden>Ver más productos</button>
+  <div class="note">Precios en pesos mexicanos con IVA incluido. Todos los productos tienen existencia al momento de la última actualización; confirma disponibilidad y tiempo de entrega al hacer tu pedido.</div>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="panel">
+    <h2>Mi pedido <button class="x" id="closeCart" aria-label="Cerrar">×</button></h2>
+    <div class="items" id="items"></div>
+    <div class="tot" id="tot"></div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>'$'+Math.round(n).toLocaleString('es-MX');
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let IDX=null, STORE={}, LOADED={}, cur='all', shown=60, list=[];
+let cart=(()=>{try{return JSON.parse(localStorage.getItem('cart2')||'{}')}catch(e){return {}}})();
+const saveCart=()=>{try{localStorage.setItem('cart2',JSON.stringify(cart))}catch(e){}};
+function toast(t){const el=$('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,1800)}
+
+async function loadCat(id){
+  if(LOADED[id]) return LOADED[id];
+  const r=await fetch('catalogo/c'+id+'.json'); if(!r.ok) throw new Error(r.status);
+  const a=await r.json(); const n=(IDX.categorias.find(c=>c.id===id)||{}).n||'';
+  a.forEach(p=>p.cn=n); LOADED[id]=a; return a;
+}
+async function loadAll(){
+  const ids=IDX.categorias.map(c=>c.id); let i=0;
+  for(const id of ids){ if(!LOADED[id]){ $('hint').textContent=`Cargando todo el catálogo… ${++i} de ${ids.length}`; await loadCat(id);} else i++; }
+}
+function card(p){
+  const inC=cart[p.id];
+  return `<article class="card">
+    <div class="pic">${p.img?`<img src="${esc(p.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'▣'}))">`:'<span class="ph">▣</span>'}</div>
+    <div><div class="cat">${esc(p.m)}${p.s?' · '+esc(p.s):''}</div><h3>${esc(p.t)}</h3><div class="mo">${esc(p.mo)}</div></div>
+    <div class="price"><span class="ours">${money(p.p)}</span><span class="lbl">IVA incluido</span></div>
+    <div class="stock">● Disponible</div>
+    <button class="add${inC?' in':''}" data-id="${esc(p.id)}">${inC?'En tu pedido ('+inC.q+')':'Agregar al pedido'}</button>
+  </article>`;
+}
+async function render(){
+  const q=$('q').value.trim().toLowerCase();
+  let src;
+  if(cur==='all'){
+    if(q){ await loadAll(); src=Object.values(LOADED).flat(); }
+    else { $('hint').textContent='Elige una categoría o escribe lo que buscas.'; $('grid').innerHTML=''; $('more').hidden=true;
+      $('grid').innerHTML=IDX.categorias.map(c=>`<button class="card" style="cursor:pointer;text-align:left;font:inherit" data-cat="${c.id}"><div class="cat">${c.k.toLocaleString('es-MX')} productos</div><h3 style="font-size:18px;font-weight:700">${esc(c.n)}</h3></button>`).join(''); return; }
+  } else src=await loadCat(cur);
+  const words=q.split(/\s+/).filter(Boolean);
+  list=src.filter(p=>{ if(!words.length) return true; const h=(p.t+' '+p.m+' '+p.mo+' '+p.s).toLowerCase(); return words.every(w=>h.includes(w)); });
+  const s=$('sort').value; if(s==='low') list=[...list].sort((a,b)=>a.p-b.p); if(s==='high') list=[...list].sort((a,b)=>b.p-a.p);
+  $('hint').textContent=`${list.length.toLocaleString('es-MX')} productos`+(q?` para “${$('q').value.trim()}”`:'');
+  $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty">No encontramos productos con esa búsqueda.</div>';
+  $('more').hidden=list.length<=shown;
+}
+function setCat(id){ cur=id; shown=60; document.querySelectorAll('#chips .chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.cat===id)); render().catch(err); }
+function err(e){ $('grid').innerHTML=`<div class="err">No se pudo cargar el catálogo (${esc(e.message)}). Recarga la página.</div>`; }
+
+function renderCart(){
+  const ids=Object.keys(cart); $('cartCount').textContent=ids.reduce((s,id)=>s+cart[id].q,0);
+  let total=0;
+  $('items').innerHTML=ids.length?ids.map(id=>{const c=cart[id]; total+=c.p*c.q; return `<div class="it"><div class="th">${c.img?`<img src="${esc(c.img)}" alt="" referrerpolicy="no-referrer">`:''}</div><div><div class="nm">${esc(c.t)}</div><div class="pp">${esc(c.mo)} · ${money(c.p)}</div></div><div class="qty"><button data-d="-1" data-id="${esc(id)}">−</button>${c.q}<button data-d="1" data-id="${esc(id)}">+</button></div></div>`}).join(''):'<div class="empty">Tu pedido está vacío.</div>';
+  const txt=()=>'Hola, quiero cotizar:\n'+ids.map(id=>`• ${cart[id].q} x ${cart[id].t} (${cart[id].mo}) — ${money(cart[id].p*cart[id].q)}`).join('\n')+`\nTotal: ${money(total)} con IVA`;
+  const wa=(STORE.whatsapp||'').replace(/\D/g,'');
+  $('tot').innerHTML=ids.length?`<div class="row big"><span>Total</span><span>${money(total)}</span></div>
+    ${wa?`<a class="send" target="_blank" rel="noopener" href="https://wa.me/${wa}?text=${encodeURIComponent(txt())}">Enviar pedido por WhatsApp</a>`:''}
+    <button class="send alt" id="copy">Copiar pedido</button>`:'';
+  const cp=$('copy'); if(cp) cp.onclick=()=>{navigator.clipboard?.writeText(txt()).then(()=>toast('Pedido copiado'),()=>toast('No se pudo copiar'))};
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('.add'); if(a){ const id=a.dataset.id; const p=list.find(x=>x.id===id); if(!p) return;
+    cart[id]=cart[id]||{t:p.t,mo:p.mo,p:p.p,img:p.img,q:0}; cart[id].q++; saveCart(); renderCart(); a.classList.add('in'); a.textContent='En tu pedido ('+cart[id].q+')'; toast('Agregado a tu pedido'); return; }
+  const c=e.target.closest('[data-cat]'); if(c && !c.classList.contains('chip')){ setCat(c.dataset.cat); window.scrollTo({top:0,behavior:'smooth'}); return; }
+  const q=e.target.closest('.qty button'); if(q){ const id=q.dataset.id; cart[id].q+= +q.dataset.d; if(cart[id].q<=0) delete cart[id]; saveCart(); renderCart(); }
+});
+$('openCart').onclick=()=>{renderCart();$('drawer').hidden=false};
+$('closeCart').onclick=()=>$('drawer').hidden=true;
+$('drawer').onclick=e=>{if(e.target.id==='drawer')$('drawer').hidden=true};
+$('more').onclick=()=>{shown+=60;render().catch(err)};
+let tq; $('q').addEventListener('input',()=>{clearTimeout(tq);tq=setTimeout(()=>{shown=60;render().catch(err)},300)});
+$('sort').onchange=()=>render().catch(err);
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip'); if(b) setCat(b.dataset.cat)});
+
+fetch('client.json').then(r=>r.ok?r.json():{}).then(d=>{STORE=d.store||{}; if(STORE.name) $('storeName').textContent=STORE.name;}).catch(()=>{});
+fetch('catalogo/index.json?v='+Date.now()).then(r=>{if(!r.ok) throw new Error('el catálogo aún no está disponible'); return r.json()}).then(d=>{
+  IDX=d; $('sub').textContent=`${d.total.toLocaleString('es-MX')} productos con existencia · actualizado ${d.actualizado}`;
+  $('chips').innerHTML=[['all','Todas'],...d.categorias.map(c=>[c.id,c.n])].map(([k,v])=>`<button class="chip" data-cat="${k}" aria-pressed="${k==='all'}">${esc(v)}</button>`).join('');
+  renderCart(); render().catch(err);
+}).catch(err);
+</script>
+</body>
+</html>
