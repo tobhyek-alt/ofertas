@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ofertas en seguridad, redes y tecnología</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#15171c; --muted:#6b7080; --line:#e6e2d8;
+  --accent:#e63956; --accent-ink:#fff; --good:#1f9d55; --good-bg:#e8f6ee; --soft:#f1eee6;
+  --ml:#f5d000; --amz:#ff9900;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:24px 18px 120px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand i{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-style:normal;font-size:16px}
+.cartbtn{font:inherit;font-weight:600;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 16px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.cartbtn b{background:var(--accent);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;padding:0 6px}
+.hero{background:var(--ink);color:#fff;border-radius:24px;padding:34px 30px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:end;margin-bottom:22px;position:relative;overflow:hidden}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding:26px 22px}}
+.hero h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:1.02;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:#ff7a90}
+.hero p{margin:12px 0 0;color:#c9ccd6;font-size:16px;line-height:1.5;max-width:520px}
+.hero .stamp{font-family:"JetBrains Mono",monospace;font-size:12px;color:#9aa0b0;margin-top:14px}
+.hero .pill{display:flex;flex-direction:column;gap:10px}
+.pill > div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px}
+.pill .k{font-size:12px;color:#9aa0b0}
+.pill .v{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:22px;margin-top:2px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+@media (max-width:700px){.chips{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:2px}}
+.chip{font:inherit;font-size:14px;white-space:nowrap;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.search{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px}
+.search input{flex:1;background:none;border:0;color:var(--ink);font:inherit;font-size:14px;padding:10px 0;outline:none}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:10px;position:relative}
+.pic{aspect-ratio:4/3;max-height:210px;border-radius:14px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid var(--soft)}
+.pic img{max-width:80%;max-height:85%;object-fit:contain}
+.pic svg{width:64px;height:64px}
+.save{position:absolute;top:22px;left:22px;background:var(--good);color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:5px 10px}
+.cat{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card h3{margin:2px 0 0;font-size:17px;line-height:1.2}
+.spec{color:var(--muted);font-size:13px;line-height:1.4}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price .ours{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:28px}
+.price .lbl{font-size:12px;color:var(--muted)}
+.cmp{display:flex;flex-direction:column;gap:4px;background:var(--soft);border-radius:12px;padding:8px 10px}
+.cmp a{display:flex;justify-content:space-between;align-items:center;font-size:13px;text-decoration:none;color:var(--muted)}
+.cmp a:hover{color:var(--ink)}
+.cmp .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.cmp s{font-family:"JetBrains Mono",monospace}
+.add{font:inherit;font-weight:600;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:11px;cursor:pointer;margin-top:auto}
+.add.in{background:var(--ink)}
+.empty{color:var(--muted);text-align:center;padding:40px}
+.note{margin-top:22px;color:var(--muted);font-size:13px;line-height:1.6;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+/* carrito */
+.drawer{position:fixed;inset:0;background:rgba(10,12,17,.45);display:flex;justify-content:flex-end;z-index:20}
+.panel{background:var(--card);width:min(420px,100%);height:100%;display:flex;flex-direction:column;padding:18px}
+.panel h2{margin:0 0 12px;font-size:20px;display:flex;justify-content:space-between;align-items:center}
+.x{font:inherit;background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted)}
+.items{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.it{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.it .th{width:52px;height:52px;border-radius:10px;border:1px solid var(--soft);display:grid;place-items:center;overflow:hidden}
+.it .th img{max-width:90%;max-height:90%}
+.it .nm{font-size:14px;font-weight:500}
+.it .pp{font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{font:inherit;width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.tot{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.tot .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
+.tot .row.big{color:var(--ink);font-weight:700;font-size:18px}
+.tot .row.good{color:var(--good);font-weight:600}
+.send{font:inherit;font-weight:700;border:0;border-radius:12px;padding:13px;cursor:pointer;background:#25d366;color:#08331a;text-align:center;text-decoration:none;display:block}
+.send.alt{background:var(--ink);color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;z-index:30}
+.err{background:#fff0f2;border:1px solid #f3c2cb;border-radius:14px;padding:14px;color:#9b1c33}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><i>★</i><span id="storeName">Ofertas en seguridad y redes</span></div>
+    <button class="cartbtn" id="openCart">Mi pedido <b id="cartCount">0</b></button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Más barato que en <em>Mercado Libre</em> y <em>Amazon</em></h1>
+      <p>Cámaras, control de acceso, enlaces inalámbricos, routers y MikroTik. Junto a cada precio te mostramos lo que cuesta hoy en Mercado Libre y Amazon, para que compares tú mismo.</p>
+      <div class="stamp" id="stamp"></div>
+    </div>
+    <div class="pill">
+      <div><div class="k">Productos en oferta</div><div class="v" id="kN">0</div></div>
+      <div><div class="k">Ahorro promedio contra marketplaces</div><div class="v" id="kAvg">—</div></div>
+    </div>
+  </section>
+
+  <div class="bar">
+    <div class="chips" id="chips"></div>
+    <label class="search">🔎<input id="q" type="search" placeholder="Buscar producto o marca…"></label>
+    <select id="sort" aria-label="Ordenar">
+      <option value="save">Mayor ahorro</option>
+      <option value="low">Precio más bajo</option>
+      <option value="high">Precio más alto</option>
+    </select>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="note" id="note">Precios en pesos mexicanos con IVA incluido. Los precios de Mercado Libre y Amazon son los más bajos que encontramos en la fecha indicada y pueden cambiar. Existencias sujetas a confirmación.</div>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="panel" role="dialog" aria-label="Mi pedido">
+    <h2>Mi pedido <button class="x" id="closeCart" aria-label="Cerrar">×</button></h2>
+    <div class="items" id="items"></div>
+    <div class="tot" id="tot"></div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const CATS = {cam:'Cámaras', acc:'Control de acceso', ptp:'Enlaces punto a punto', router:'Routers y módems', mk:'MikroTik', net:'Redes y hogar', nvr:'Grabadores NVR', kit:'Kits de cámaras', hdd:'Discos duros', solar:'Cámaras solares', lockcode:'Cerraduras con código', lockelec:'Cerraduras eléctricas', mag:'Chapas magnéticas y electroimanes', tech:'Tecnología'};
+const MK = {ml:{n:'Mercado Libre',c:'var(--ml)'}, amz:{n:'Amazon',c:'var(--amz)'}};
+const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="#e63956" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg>';
+const $ = id => document.getElementById(id);
+const money = n => '$' + n.toLocaleString('es-MX',{minimumFractionDigits:n%1?2:0, maximumFractionDigits:2});
+let DATA=null, P=[], state={cat:'all', q:'', sort:'save'};
+let cart = (()=>{ try{ return JSON.parse(localStorage.getItem('cart')||'{}'); }catch(e){ return {}; } })();
+const saveCart = () => { try{ localStorage.setItem('cart', JSON.stringify(cart)); }catch(e){} };
+
+function lowest(p){ return Math.min(...Object.values(p.market).map(o=>o.p)); }
+function card(p){
+  const inCart = cart[p.id] > 0;
+  const cmp = Object.entries(p.market).map(([s,o])=>`<a href="${o.u}" target="_blank" rel="noopener"><span><span class="dot" style="background:${MK[s].c}"></span>En ${MK[s].n}</span><s>${money(o.p)}</s></a>`).join('');
+  return `<article class="card">
+    <div class="pic">${p.img?`<img src="${p.img}" alt="${p.name}" loading="lazy">`:ICON}</div>
+    <span class="save">Ahorras ${money(Math.round(p.save))}</span>
+    <div><div class="cat">${CATS[p.cat]||''}</div><h3>${p.name}</h3></div>
+    <div class="spec">${p.spec}</div>
+    <div class="price"><span class="ours">${money(p.price)}</span><span class="lbl">nuestro precio</span></div>
+    <div class="cmp">${cmp}</div>
+    <button class="add ${inCart?'in':''}" data-id="${p.id}">${inCart?`✓ En tu pedido (${cart[p.id]}) · agregar`:'Agregar al pedido'}</button>
+  </article>`;
+}
+function render(){
+  const q=state.q.trim().toLowerCase();
+  let list=P.filter(p=>state.cat==='all'||p.cat===state.cat).filter(p=>!q||(p.name+' '+p.spec+' '+(CATS[p.cat]||'')).toLowerCase().includes(q));
+  const by={save:(a,b)=>b.save/lowest(b)-a.save/lowest(a), low:(a,b)=>a.price-b.price, high:(a,b)=>b.price-a.price};
+  list.sort(by[state.sort]);
+  $('grid').innerHTML = list.length ? list.map(card).join('') : '<div class="empty">No encontramos productos con esa búsqueda.</div>';
+  renderCart();
+}
+function renderCart(){
+  const ids=Object.keys(cart).filter(id=>cart[id]>0 && P.find(p=>p.id===id));
+  const n=ids.reduce((s,id)=>s+cart[id],0);
+  $('cartCount').textContent=n;
+  if (!ids.length){ $('items').innerHTML='<p class="empty">Tu pedido está vacío. Agrega productos para armar tu cotización.</p>'; $('tot').innerHTML=''; return; }
+  let total=0, saved=0;
+  $('items').innerHTML=ids.map(id=>{ const p=P.find(x=>x.id===id); total+=p.price*cart[id]; saved+=p.save*cart[id];
+    return `<div class="it"><div class="th">${p.img?`<img src="${p.img}" alt="">`:ICON}</div><div><div class="nm">${p.name}</div><div class="pp">${money(p.price)} c/u</div></div>
+      <div class="qty"><button data-q="${id}" data-d="-1" aria-label="Quitar uno">−</button><span>${cart[id]}</span><button data-q="${id}" data-d="1" aria-label="Agregar uno">+</button></div></div>`; }).join('');
+  const wa=(DATA.store.whatsapp||'').replace(/\D/g,'');
+  const msg=orderText(ids,total);
+  $('tot').innerHTML=`<div class="row big"><span>Total</span><span>${money(+total.toFixed(2))}</span></div>
+    <div class="row good"><span>Ahorras contra marketplaces</span><span>${money(Math.round(saved))}</span></div>
+    ${wa?`<a class="send" href="https://wa.me/${wa}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>`:''}
+    <button class="send ${wa?'alt':''}" id="copyOrder">${wa?'Copiar pedido':'Copiar pedido para enviarlo'}</button>
+    ${wa?`<div class="row" style="justify-content:center">WhatsApp: ${DATA.store.whatsapp}</div>`:''}`;
+  $('copyOrder').onclick = async ()=>{ try{ await navigator.clipboard.writeText(msg); toast('Pedido copiado. Pégalo en tu mensaje.'); }catch(e){ toast('No se pudo copiar automáticamente.'); } };
+}
+function orderText(ids,total){
+  const lines=ids.map(id=>{const p=P.find(x=>x.id===id); return `• ${cart[id]} x ${p.name} — ${money(p.price)} c/u`;});
+  return `Hola${DATA.store.name?' '+DATA.store.name:''}, quiero cotizar:\n${lines.join('\n')}\nTotal: ${money(+total.toFixed(2))}\n(Precios vistos el ${DATA.updatedLabel})`;
+}
+function toast(t){ const el=$('toast'); el.textContent=t; el.hidden=false; clearTimeout(el._t); el._t=setTimeout(()=>el.hidden=true,2200); }
+
+function boot(){
+  if (DATA.store.name){ $('storeName').textContent=DATA.store.name; document.title=DATA.store.name+' — Ofertas'; }
+  if (DATA.store.note) $('note').textContent=DATA.store.note+' '+$('note').textContent;
+  $('stamp').textContent='Precios comparados el '+DATA.updatedLabel;
+  $('kN').textContent=P.length;
+  const avg=P.length?P.reduce((s,p)=>s+p.save/lowest(p),0)/P.length:0;
+  $('kAvg').textContent=Math.round(avg*100)+'%';
+  const cats=[...new Set(P.map(p=>p.cat))];
+  $('chips').innerHTML=[['all','Todo'],...cats.map(c=>[c,CATS[c]])].map(([k,v])=>`<button class="chip" data-cat="${k}" aria-pressed="${k==='all'}">${v}</button>`).join('');
+  $('chips').onclick=e=>{const b=e.target.closest('.chip'); if(!b) return; state.cat=b.dataset.cat; document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b)); render();};
+  $('q').oninput=e=>{state.q=e.target.value; render();};
+  $('sort').onchange=e=>{state.sort=e.target.value; render();};
+  $('grid').onclick=e=>{const b=e.target.closest('.add'); if(!b) return; cart[b.dataset.id]=(cart[b.dataset.id]||0)+1; saveCart(); render(); toast('Agregado a tu pedido');};
+  $('items').onclick=e=>{const b=e.target.closest('[data-q]'); if(!b) return; const id=b.dataset.q; cart[id]=Math.max(0,(cart[id]||0)+(+b.dataset.d)); saveCart(); render();};
+  $('openCart').onclick=()=>{$('drawer').hidden=false;};
+  $('closeCart').onclick=()=>{$('drawer').hidden=true;};
+  $('drawer').onclick=e=>{ if(e.target.id==='drawer') $('drawer').hidden=true; };
+  render();
+}
+fetch('client.json?v='+Date.now()).then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
+  .then(d=>{DATA=d; P=d.products; boot();})
+  .catch(e=>{$('grid').innerHTML=`<div class="err">No se pudieron cargar los precios (${e.message}). Recarga la página.</div>`;});
+</script>
+</body>
+</html>

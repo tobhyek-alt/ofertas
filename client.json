@@ -1,0 +1,407 @@
+{
+ "updated": "2026-11-11T11:45:00-06:00",
+ "updatedLabel": "11 de noviembre de 2026, 11:45 h",
+ "store": {
+  "name": "",
+  "whatsapp": "",
+  "note": ""
+ },
+ "products": [
+  {
+   "id": "ranger",
+   "cat": "cam",
+   "icon": "cam",
+   "name": "Imou Ranger 2C Pro 3MP",
+   "spec": "Cámara Wi-Fi interior 2K, 2.4/5 GHz, visión nocturna a color",
+   "img": "img/ranger.webp",
+   "price": 529,
+   "market": {
+    "ml": {
+     "p": 598,
+     "u": "https://www.mercadolibre.com.mx/p/MLM66992755"
+    },
+    "amz": {
+     "p": 599,
+     "u": "https://www.amazon.com.mx/dp/B0G77VD9MK"
+    }
+   },
+   "save": 69
+  },
+  {
+   "id": "k30",
+   "cat": "acc",
+   "icon": "finger",
+   "name": "ZKTeco K30",
+   "spec": "Checador y control de acceso: huella y tarjeta, 1,000 huellas, batería de respaldo, TCP/IP",
+   "img": "img/k30.webp",
+   "price": 1909,
+   "market": {
+    "ml": {
+     "p": 2306,
+     "u": "https://www.mercadolibre.com.mx/p/MLM44591878"
+    },
+    "amz": {
+     "p": 1989,
+     "u": "https://www.amazon.com.mx/dp/B01M650YFU"
+    }
+   },
+   "save": 80
+  },
+  {
+   "id": "k40",
+   "cat": "acc",
+   "icon": "finger",
+   "name": "ZKTeco K40",
+   "spec": "Checador biométrico de huella, TCP/IP y USB, 1,000 huellas",
+   "img": null,
+   "price": 1669,
+   "market": {
+    "ml": {
+     "p": 1985,
+     "u": "https://www.mercadolibre.com.mx/p/MLM2067156183"
+    }
+   },
+   "save": 316
+  },
+  {
+   "id": "mb10",
+   "cat": "acc",
+   "icon": "face",
+   "name": "ZKTeco MB10",
+   "spec": "Terminal de asistencia y acceso con rostro y huella",
+   "img": "img/mb10.webp",
+   "price": 2069,
+   "market": {
+    "ml": {
+     "p": 2445,
+     "u": "https://www.mercadolibre.com.mx/p/MLM47136997"
+    },
+    "amz": {
+     "p": 2744,
+     "u": "https://www.amazon.com.mx/dp/B07TK5G1XW"
+    }
+   },
+   "save": 376
+  },
+  {
+   "id": "lbe",
+   "cat": "ptp",
+   "icon": "antenna",
+   "name": "Ubiquiti LiteBeam 5AC Gen2",
+   "spec": "Antena/radio airMAX AC 5 GHz, 23 dBi, hasta 450 Mbps, para enlaces punto a punto",
+   "img": "img/lbe.jpg",
+   "price": 1739,
+   "market": {
+    "ml": {
+     "p": 1756,
+     "u": "https://www.mercadolibre.com.mx/p/MLM21652289"
+    },
+    "amz": {
+     "p": 1756,
+     "u": "https://www.amazon.com.mx/dp/B072KQNGB1"
+    }
+   },
+   "save": 17
+  },
+  {
+   "id": "cpe210",
+   "cat": "ptp",
+   "icon": "antenna",
+   "name": "TP-Link CPE210",
+   "spec": "CPE de exterior 2.4 GHz, 9 dBi, 300 Mbps, Pharos",
+   "img": "img/cpe210.jpg",
+   "price": 849,
+   "market": {
+    "ml": {
+     "p": 1157,
+     "u": "https://www.mercadolibre.com.mx/p/MLM6315434"
+    },
+    "amz": {
+     "p": 996.6,
+     "u": "https://www.amazon.com.mx/dp/B00P4JKQGK"
+    }
+   },
+   "save": 147.6
+  },
+  {
+   "id": "ax23",
+   "cat": "router",
+   "icon": "router",
+   "name": "TP-Link Archer AX23",
+   "spec": "Router Wi-Fi 6 AX1800 doble banda, 4 antenas",
+   "img": "img/ax23.jpg",
+   "price": 1169,
+   "market": {
+    "ml": {
+     "p": 1232,
+     "u": "https://www.mercadolibre.com.mx/p/MLM70213997"
+    }
+   },
+   "save": 63
+  },
+  {
+   "id": "hapaxlite",
+   "cat": "mk",
+   "icon": "router",
+   "name": "MikroTik hAP ax lite",
+   "spec": "Router Wi-Fi 6 2.4 GHz, 4 puertos Gigabit (L41G-2axD)",
+   "img": null,
+   "price": 1379,
+   "market": {
+    "ml": {
+     "p": 1772,
+     "u": "https://www.mercadolibre.com.mx/p/MLM2129318104"
+    },
+    "amz": {
+     "p": 1474.94,
+     "u": "https://www.amazon.com.mx/dp/B0BVV8RPVQ"
+    }
+   },
+   "save": 95.94
+  },
+  {
+   "id": "hapaclite",
+   "cat": "mk",
+   "icon": "router",
+   "name": "MikroTik hAP ac lite",
+   "spec": "Router doble banda AC, 5 puertos Fast Ethernet (RB952Ui-5ac2nD)",
+   "img": "img/hapaclite.jpg",
+   "price": 1469,
+   "market": {
+    "ml": {
+     "p": 1729,
+     "u": "https://articulo.mercadolibre.com.mx/MLM-3753770857-router-inalambrico-mikrotik-hap-ac-lite-rb952ui-5ac2nd-_JM"
+    },
+    "amz": {
+     "p": 1510.87,
+     "u": "https://www.amazon.com.mx/dp/B019PCF3QY"
+    }
+   },
+   "save": 41.87
+  },
+  {
+   "id": "nvr4",
+   "cat": "nvr",
+   "icon": "nvr",
+   "name": "Hikvision NVR 4 canales PoE",
+   "spec": "DS-7104NI-Q1/4P(D): grabador IP 4 MP, 4 puertos PoE, 1 bahía de disco",
+   "img": "img/nvr4.jpg",
+   "price": 2139,
+   "market": {
+    "ml": {
+     "p": 2260,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU3897683634"
+    },
+    "amz": {
+     "p": 2443,
+     "u": "https://www.amazon.com.mx/dp/B0CYV5CXZY"
+    }
+   },
+   "save": 121
+  },
+  {
+   "id": "nvr8",
+   "cat": "nvr",
+   "icon": "nvr",
+   "name": "Hikvision NVR 8 canales PoE 4K",
+   "spec": "DS-7608NI-Q1/8P(E): grabador IP 8 MP (4K), 8 puertos PoE, AcuSense",
+   "img": "img/nvr8.jpg",
+   "price": 3759,
+   "market": {
+    "ml": {
+     "p": 4404,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU5825437525"
+    },
+    "amz": {
+     "p": 4244,
+     "u": "https://www.amazon.com.mx/dp/B0GQXY6WNJ"
+    }
+   },
+   "save": 485
+  },
+  {
+   "id": "kit1080",
+   "cat": "kit",
+   "icon": "cam",
+   "name": "Kit HiLook 1080p 4 cámaras",
+   "spec": "HL-1080-MC4: DVR 4 canales + 4 cámaras bala metálicas 1080p con accesorios",
+   "img": "img/kit1080.jpg",
+   "price": 1719,
+   "market": {
+    "ml": {
+     "p": 2390,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU3981205830"
+    },
+    "amz": {
+     "p": 1968,
+     "u": "https://www.amazon.com.mx/dp/B0H3XB4YM6"
+    }
+   },
+   "save": 249
+  },
+  {
+   "id": "kit3k",
+   "cat": "kit",
+   "icon": "cam",
+   "name": "Kit Hikvision 3K (5 MP) 4 cámaras",
+   "spec": "KIT-3K-DL: DVR 4 canales + 4 cámaras bala Dual Light 5 MP con micrófono",
+   "img": "img/kit3k.jpg",
+   "price": 3529,
+   "market": {
+    "ml": {
+     "p": 5007,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU4700361299"
+    },
+    "amz": {
+     "p": 4013.6,
+     "u": "https://www.amazon.com.mx/dp/B0G75262B2"
+    }
+   },
+   "save": 484.6
+  },
+  {
+   "id": "c410kit",
+   "cat": "solar",
+   "icon": "sun",
+   "name": "TP-Link Tapo C410 KIT solar",
+   "spec": "Cámara 2K de batería + panel solar, exterior IP65, detección IA",
+   "img": "img/c410kit.jpg",
+   "price": 1489,
+   "market": {
+    "ml": {
+     "p": 1804,
+     "u": "https://www.mercadolibre.com.mx/p/MLM59323716"
+    }
+   },
+   "save": 315
+  },
+  {
+   "id": "a321",
+   "cat": "lockelec",
+   "icon": "lock",
+   "name": "Cerradura eléctrica Phillips/Assa Abloy 321",
+   "spec": "321-DCBI-ABG: cerradura eléctrica de sobreponer, izquierda, con botón",
+   "img": "img/a321.jpg",
+   "price": 919,
+   "market": {
+    "ml": {
+     "p": 1194,
+     "u": "https://www.mercadolibre.com.mx/p/MLM29408472"
+    },
+    "amz": {
+     "p": 1096.71,
+     "u": "https://www.amazon.com.mx/dp/B08876ZTCF"
+    }
+   },
+   "save": 177.71
+  },
+  {
+   "id": "accessrim",
+   "cat": "lockelec",
+   "icon": "lock",
+   "name": "Cerradura eléctrica AccessPRO",
+   "spec": "ACCESSRIM: cerradura eléctrica de exterior con llave, derecha",
+   "img": "img/accessrim.jpg",
+   "price": 579,
+   "market": {
+    "ml": {
+     "p": 790,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU869577318"
+    },
+    "amz": {
+     "p": 871.6,
+     "u": "https://www.amazon.com.mx/dp/B0C8LTJNPD"
+    }
+   },
+   "save": 211
+  },
+  {
+   "id": "hikmag",
+   "cat": "mag",
+   "icon": "magnet",
+   "name": "Chapa magnética Hikvision 600 lbs",
+   "spec": "DS-K4H258S: electroimán 280 kg (617 lbs) para puerta normal, 12 V",
+   "img": "img/hikmag.jpg",
+   "price": 679,
+   "market": {
+    "ml": {
+     "p": 841,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU3293514517"
+    },
+    "amz": {
+     "p": 804.12,
+     "u": "https://www.amazon.com.mx/dp/B09R42H4QR"
+    }
+   },
+   "save": 125.12
+  },
+  {
+   "id": "apmag600",
+   "cat": "mag",
+   "icon": "magnet",
+   "name": "Chapa magnética AccessPRO 600 lbs LED",
+   "spec": "MAG600NLEDV2: electroimán 600 lbs con LED, libre de magnetismo residual",
+   "img": "img/apmag600.jpg",
+   "price": 639,
+   "market": {
+    "ml": {
+     "p": 721,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU970102027"
+    },
+    "amz": {
+     "p": 695.5,
+     "u": "https://www.amazon.com.mx/dp/B07W4FJX71"
+    }
+   },
+   "save": 56.5
+  },
+  {
+   "id": "ym280",
+   "cat": "mag",
+   "icon": "magnet",
+   "name": "Chapa magnética YLI 280 kg LED",
+   "spec": "YM-280N(LED): electroimán 600 lbs con indicador LED, 12/24 V",
+   "img": "img/ym280.jpg",
+   "price": 739,
+   "market": {
+    "ml": {
+     "p": 899,
+     "u": "https://www.mercadolibre.com.mx/p/MLM38040740"
+    }
+   },
+   "save": 160
+  },
+  {
+   "id": "lm1805",
+   "cat": "mag",
+   "icon": "magnet",
+   "name": "Electroimán ZKTeco LM-1805 (180 kg)",
+   "spec": "Chapa electromagnética 350 lbs para puertas ligeras, 12 V",
+   "img": "img/lm1805.jpg",
+   "price": 439,
+   "market": {
+    "ml": {
+     "p": 566,
+     "u": "https://www.mercadolibre.com.mx/p/MLM39449001"
+    }
+   },
+   "save": 127
+  },
+  {
+   "id": "mag350",
+   "cat": "mag",
+   "icon": "magnet",
+   "name": "Chapa magnética AccessPRO 350 lbs LED",
+   "spec": "MAG350NLED: electroimán 350 lbs con LED para uso interior",
+   "img": "img/mag350.jpg",
+   "price": 659,
+   "market": {
+    "ml": {
+     "p": 949,
+     "u": "https://www.mercadolibre.com.mx/p/MLM36266205"
+    }
+   },
+   "save": 290
+  }
+ ]
+}
