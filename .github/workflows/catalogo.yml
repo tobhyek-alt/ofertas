@@ -55,7 +55,7 @@ jobs:
       - name: Armar sitio
         run: |
           mkdir -p _site
-          cp index.html catalogo.html client.json .nojekyll _site/ 2>/dev/null || true
+          cp index.html catalogo.html ml.html client.json .nojekyll _site/ 2>/dev/null || true
           cp -r img _site/
           if [ -f catalogo/index.json ]; then cp -r catalogo _site/; fi
           # nunca publicar archivos internos
