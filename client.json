@@ -832,30 +832,6 @@
    "catalog": true
   },
   {
-   "id": "kenpkt",
-   "cat": "radio",
-   "icon": "radio",
-   "name": "Kenwood radio portátil UHF digital",
-   "spec": "PKT-300K: NXDN/analógico, 5 W, 64 canales, GPS",
-   "img": "img/s175842.jpg",
-   "price": 3699,
-   "market": {},
-   "save": 0,
-   "catalog": true
-  },
-  {
-   "id": "tx790u",
-   "cat": "radio",
-   "icon": "radio",
-   "name": "TXPRO radio portátil DMR UHF",
-   "spec": "TX790U: 400–470 MHz, 64 canales, cifrado, 5 W",
-   "img": "img/s218196.jpg",
-   "price": 1059,
-   "market": {},
-   "save": 0,
-   "catalog": true
-  },
-  {
    "id": "tx790v",
    "cat": "radio",
    "icon": "radio",
