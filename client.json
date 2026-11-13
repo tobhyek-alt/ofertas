@@ -862,7 +862,7 @@
    "name": "Ubiquiti NanoStation Loco M2",
    "spec": "LOCOM2: airMAX 2.4 GHz, antena 8 dBi, hasta 150 Mbps",
    "img": "img/t8168.jpg",
-   "price": 1279,
+   "price": 1219,
    "market": {},
    "save": 0,
    "catalog": true
@@ -874,7 +874,7 @@
    "name": "Ubiquiti NanoStation M2",
    "spec": "NSM2: airMAX 2.4 GHz, antena 11 dBi, 2 puertos, hasta 150 Mbps",
    "img": "img/t8170.jpg",
-   "price": 2549,
+   "price": 2329,
    "market": {},
    "save": 0,
    "catalog": true
@@ -910,7 +910,7 @@
    "name": "Ubiquiti LiteBeam M5",
    "spec": "LBE-M5-23: airMAX 5 GHz, antena 23 dBi, hasta 100 Mbps",
    "img": "img/t8332.jpg",
-   "price": 1119,
+   "price": 1099,
    "market": {},
    "save": 0,
    "catalog": true
@@ -970,7 +970,7 @@
    "name": "Ubiquiti IsoStation 5AC",
    "spec": "IS-5AC: airMAX AC 5 GHz, sectorial 14 dBi 45°, hasta 450 Mbps",
    "img": "img/t10716.jpg",
-   "price": 3569,
+   "price": 3409,
    "market": {},
    "save": 0,
    "catalog": true
@@ -982,7 +982,7 @@
    "name": "Ubiquiti Rocket 5AC Lite",
    "spec": "R5AC-LITE: radio conectorizado airMAX AC 5 GHz, 27 dBm, hasta 500 Mbps",
    "img": "img/t8175.jpg",
-   "price": 3719,
+   "price": 3379,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1018,7 +1018,7 @@
    "name": "Ubiquiti airFiber 5XHD",
    "spec": "AF-5XHD: radio carrier 5 GHz conectorizado, hasta 1 Gbps",
    "img": "img/t19057.jpg",
-   "price": 11119,
+   "price": 10739,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1042,7 +1042,7 @@
    "name": "Ubiquiti airFiber 5XHD kit 34 dBi",
    "spec": "AF-5XHD-34-S45: radio AF-5XHD + antena 34 dBi, enlace PtP hasta 500 Mbps",
    "img": "img/t63797.jpg",
-   "price": 19389,
+   "price": 19299,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1114,7 +1114,7 @@
    "name": "Ubiquiti antena airFiber 5 GHz 30 dBi",
    "spec": "AF-5G30-S45: direccional para AF-5X / AF-5XHD",
    "img": "img/t8792.jpg",
-   "price": 3529,
+   "price": 3459,
    "market": {},
    "save": 0,
    "catalog": true
