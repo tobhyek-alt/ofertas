@@ -82,6 +82,8 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
 .tot .row.good{color:var(--good);font-weight:600}
 .send{font:inherit;font-weight:700;border:0;border-radius:12px;padding:13px;cursor:pointer;background:#25d366;color:#08331a;text-align:center;text-decoration:none;display:block}
 .send.alt{background:var(--ink);color:#fff}
+.shipin{width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.shiplbl{font-size:13px;color:var(--muted);margin-top:4px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;z-index:30}
 .err{background:#fff0f2;border:1px solid #f3c2cb;border-radius:14px;padding:14px;color:#9b1c33}
 </style>
@@ -173,17 +175,23 @@ function renderCart(){
     return `<div class="it"><div class="th">${p.img?`<img src="${p.img}" alt="">`:ICON}</div><div><div class="nm">${p.name}</div><div class="pp">${money(p.price)} c/u</div></div>
       <div class="qty"><button data-q="${id}" data-d="-1" aria-label="Quitar uno">−</button><span>${cart[id]}</span><button data-q="${id}" data-d="1" aria-label="Agregar uno">+</button></div></div>`; }).join('');
   const wa=(DATA.store.whatsapp||'').replace(/\D/g,'');
-  const msg=orderText(ids,total);
-  $('tot').innerHTML=`<div class="row big"><span>Total</span><span>${money(+total.toFixed(2))}</span></div>
+  const shipTxt=DATA.store.shipping||'Se cotiza por WhatsApp';
+  let ship=''; try{ ship=localStorage.getItem('shipTo')||''; }catch(e){}
+  const msg=orderText(ids,total,ship);
+  $('tot').innerHTML=`<div class="row big"><span>Subtotal</span><span>${money(+total.toFixed(2))}</span></div>
+    <div class="row"><span>Envío</span><span>${shipTxt}</span></div>
     ${saved>0?`<div class="row good"><span>Ahorras contra marketplaces</span><span>${money(Math.round(saved))}</span></div>`:''}
-    ${wa?`<a class="send" href="https://wa.me/${wa}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>`:''}
+    <label class="shiplbl" for="shipTo">¿Dónde lo recibes? Ciudad o código postal</label>
+    <input class="shipin" id="shipTo" placeholder="Ej. Mérida, 97000" value="${ship.replace(/"/g,'&quot;')}">
+    ${wa?`<a class="send" id="waSend" href="https://wa.me/${wa}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>`:''}
     <button class="send ${wa?'alt':''}" id="copyOrder">${wa?'Copiar pedido':'Copiar pedido para enviarlo'}</button>
     ${wa?`<div class="row" style="justify-content:center">WhatsApp: ${DATA.store.whatsapp}</div>`:''}`;
-  $('copyOrder').onclick = async ()=>{ try{ await navigator.clipboard.writeText(msg); toast('Pedido copiado. Pégalo en tu mensaje.'); }catch(e){ toast('No se pudo copiar automáticamente.'); } };
+  $('shipTo').oninput=e=>{ try{ localStorage.setItem('shipTo',e.target.value); }catch(_){} if($('waSend')) $('waSend').href=`https://wa.me/${wa}?text=${encodeURIComponent(orderText(ids,total,e.target.value))}`; };
+  $('copyOrder').onclick = async ()=>{ const msg=orderText(ids,total,$('shipTo').value); try{ await navigator.clipboard.writeText(msg); toast('Pedido copiado. Pégalo en tu mensaje.'); }catch(e){ toast('No se pudo copiar automáticamente.'); } };
 }
-function orderText(ids,total){
+function orderText(ids,total,ship){
   const lines=ids.map(id=>{const p=P.find(x=>x.id===id); return `• ${cart[id]} x ${p.name} — ${money(p.price)} c/u`;});
-  return `Hola${DATA.store.name?' '+DATA.store.name:''}, quiero cotizar:\n${lines.join('\n')}\nTotal: ${money(+total.toFixed(2))}\n(Precios vistos el ${DATA.updatedLabel})`;
+  return `Hola${DATA.store.name?' '+DATA.store.name:''}, quiero cotizar:\n${lines.join('\n')}\nSubtotal: ${money(+total.toFixed(2))}\nEnvío: ${(ship||'').trim()?'a '+ship.trim()+' (por cotizar)':'por cotizar, te digo mi ciudad'}\n(Precios vistos el ${DATA.updatedLabel})`;
 }
 function toast(t){ const el=$('toast'); el.textContent=t; el.hidden=false; clearTimeout(el._t); el._t=setTimeout(()=>el.hidden=true,2200); }
 

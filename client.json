@@ -4,8 +4,9 @@
  "store": {
   "name": "IT Integraciones Tecnológicas",
   "whatsapp": "+52 999 348 8801",
-  "note": "",
-  "logo": "img/logo.png"
+  "note": "Precios sin envío: el envío se cotiza por WhatsApp según tu ciudad.",
+  "logo": "img/logo.png",
+  "shipping": "Se cotiza por WhatsApp"
  },
  "products": [
   {
