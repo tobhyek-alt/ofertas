@@ -112,6 +112,7 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
     <div class="chips" id="chips"></div>
     <label class="search">🔎<input id="q" type="search" placeholder="Buscar producto o marca…"></label>
     <select id="sort" aria-label="Ordenar">
+      <option value="cat">Por categoría</option>
       <option value="save">Mayor ahorro</option>
       <option value="low">Precio más bajo</option>
       <option value="high">Precio más alto</option>
@@ -134,11 +135,14 @@ select{font:inherit;font-size:14px;color:var(--ink);background:var(--card);borde
 
 <script>
 const CATS = {cam:'Cámaras', acc:'Control de acceso', ptp:'Enlaces punto a punto', router:'Routers y módems', mk:'MikroTik', net:'Redes y hogar', nvr:'Grabadores NVR', kit:'Kits de cámaras', hdd:'Discos duros', solar:'Cámaras solares', lockcode:'Cerraduras con código', lockelec:'Cerraduras eléctricas', mag:'Chapas magnéticas y electroimanes', dvr:'Grabadores DVR', utp:'Cable UTP', antena:'Antenas', radio:'Radios', switch:'Switches', tel:'Telefonía IP y conmutadores', tech:'Tecnología'};
+// Orden de la página: cámaras y videovigilancia, luego redes, luego lo demás
+const ORDER=['cam','kit','solar','dvr','nvr','hdd','switch','router','net','mk','ptp','antena','utp','tel','acc','lockelec','lockcode','mag','radio','tech'];
+const rank=c=>{const i=ORDER.indexOf(c);return i<0?99:i;};
 const MK = {ml:{n:'Mercado Libre',c:'var(--ml)'}, amz:{n:'Amazon',c:'var(--amz)'}};
 const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="#e63956" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 10h8M8 14h5"/></svg>';
 const $ = id => document.getElementById(id);
 const money = n => '$' + n.toLocaleString('es-MX',{minimumFractionDigits:n%1?2:0, maximumFractionDigits:2});
-let DATA=null, P=[], state={cat:'all', q:'', sort:'save'};
+let DATA=null, P=[], state={cat:'all', q:'', sort:'cat'};
 let cart = (()=>{ try{ return JSON.parse(localStorage.getItem('cart')||'{}'); }catch(e){ return {}; } })();
 const saveCart = () => { try{ localStorage.setItem('cart', JSON.stringify(cart)); }catch(e){} };
 
@@ -160,7 +164,7 @@ function card(p){
 function render(){
   const q=state.q.trim().toLowerCase();
   let list=P.filter(p=>state.cat==='all'||p.cat===state.cat).filter(p=>!q||(p.name+' '+p.spec+' '+(CATS[p.cat]||'')).toLowerCase().includes(q));
-  const by={save:(a,b)=>ratio(b)-ratio(a), low:(a,b)=>a.price-b.price, high:(a,b)=>b.price-a.price};
+  const by={cat:(a,b)=>rank(a.cat)-rank(b.cat)||ratio(b)-ratio(a)||a.price-b.price, save:(a,b)=>ratio(b)-ratio(a), low:(a,b)=>a.price-b.price, high:(a,b)=>b.price-a.price};
   list.sort(by[state.sort]);
   $('grid').innerHTML = list.length ? list.map(card).join('') : '<div class="empty">No encontramos productos con esa búsqueda.</div>';
   renderCart();
@@ -203,7 +207,7 @@ function boot(){
   $('kN').textContent=P.length;
   const C=P.filter(p=>!p.catalog); const avg=C.length?C.reduce((s,p)=>s+p.save/lowest(p),0)/C.length:0;
   $('kAvg').textContent=Math.round(avg*100)+'%';
-  const cats=[...new Set(P.map(p=>p.cat))];
+  const cats=[...new Set(P.map(p=>p.cat))].sort((a,b)=>rank(a)-rank(b));
   $('chips').innerHTML=[['all','Todo'],...cats.map(c=>[c,CATS[c]])].map(([k,v])=>`<button class="chip" data-cat="${k}" aria-pressed="${k==='all'}">${v}</button>`).join('');
   $('chips').onclick=e=>{const b=e.target.closest('.chip'); if(!b) return; state.cat=b.dataset.cat; document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b)); render();};
   $('q').oninput=e=>{state.q=e.target.value; render();};
