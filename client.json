@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T09:45:00-06:00",
- "updatedLabel": "18 de noviembre de 2026, 9:45 h",
+ "updated": "2026-11-19T13:00:00-06:00",
+ "updatedLabel": "19 de noviembre de 2026, 13:00 h",
  "store": {
   "name": "IT Integraciones Tecnológicas",
   "whatsapp": "+52 999 348 8801",
@@ -23,11 +23,11 @@
      "u": "https://www.mercadolibre.com.mx/p/MLM66992755"
     },
     "amz": {
-     "p": 578.82,
+     "p": 581.03,
      "u": "https://www.amazon.com.mx/dp/B0G77VD9MK"
     }
    },
-   "save": 49.82
+   "save": 52.03
   },
   {
    "id": "k30",
@@ -36,18 +36,18 @@
    "name": "ZKTeco K30",
    "spec": "Checador y control de acceso: huella y tarjeta, 1,000 huellas, batería de respaldo, TCP/IP",
    "img": "img/k30.webp",
-   "price": 1899,
+   "price": 1919,
    "market": {
     "ml": {
      "p": 2249.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM44591878"
     },
     "amz": {
-     "p": 2044,
+     "p": 2056,
      "u": "https://www.amazon.com.mx/dp/B01M650YFU"
     }
    },
-   "save": 145
+   "save": 137
   },
   {
    "id": "k40",
@@ -56,14 +56,14 @@
    "name": "ZKTeco K40",
    "spec": "Checador biométrico de huella, TCP/IP y USB, 1,000 huellas",
    "img": null,
-   "price": 1669,
+   "price": 1699,
    "market": {
     "ml": {
-     "p": 1788.0,
+     "p": 1832.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM2067156183"
     }
    },
-   "save": 119.0
+   "save": 133.0
   },
   {
    "id": "mb10",
@@ -72,14 +72,14 @@
    "name": "ZKTeco MB10",
    "spec": "Terminal de asistencia y acceso con rostro y huella",
    "img": "img/mb10.webp",
-   "price": 2059,
+   "price": 2099,
    "market": {
     "ml": {
      "p": 2399.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM39369173"
     }
    },
-   "save": 340.0
+   "save": 300.0
   },
   {
    "id": "p100",
@@ -95,11 +95,11 @@
      "u": "https://www.mercadolibre.com.mx/p/MLM62214141"
     },
     "amz": {
-     "p": 692,
+     "p": 694,
      "u": "https://www.amazon.com.mx/dp/B081VR9HK4"
     }
    },
-   "save": 143
+   "save": 145
   },
   {
    "id": "cpe510",
@@ -108,18 +108,18 @@
    "name": "TP-Link CPE510",
    "spec": "CPE de exterior 5 GHz, 13 dBi, 300 Mbps, Pharos",
    "img": "img/cpe510.jpg",
-   "price": 1349,
+   "price": 1379,
    "market": {
     "ml": {
-     "p": 1730.0,
+     "p": 1567.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM6315552"
     },
     "amz": {
-     "p": 1417.35,
+     "p": 1428.47,
      "u": "https://www.amazon.com.mx/dp/B00N2RO63U"
     }
    },
-   "save": 68.35
+   "save": 49.47
   },
   {
    "id": "cpe210",
@@ -128,18 +128,18 @@
    "name": "TP-Link CPE210",
    "spec": "CPE de exterior 2.4 GHz, 9 dBi, 300 Mbps, Pharos",
    "img": "img/cpe210.jpg",
-   "price": 849,
+   "price": 859,
    "market": {
     "ml": {
      "p": 1089.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM6315434"
     },
     "amz": {
-     "p": 1014.89,
+     "p": 996.6,
      "u": "https://www.amazon.com.mx/dp/B00P4JKQGK"
     }
    },
-   "save": 165.89
+   "save": 137.6
   },
   {
    "id": "ax23",
@@ -148,14 +148,14 @@
    "name": "TP-Link Archer AX23",
    "spec": "Router Wi-Fi 6 AX1800 doble banda, 4 antenas",
    "img": "img/ax23.jpg",
-   "price": 1159,
+   "price": 1179,
    "market": {
     "ml": {
-     "p": 1194.0,
+     "p": 1314.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM19864195"
     }
    },
-   "save": 35.0
+   "save": 135.0
   },
   {
    "id": "hapaxlite",
@@ -164,38 +164,18 @@
    "name": "MikroTik hAP ax lite",
    "spec": "Router Wi-Fi 6 2.4 GHz, 4 puertos Gigabit (L41G-2axD)",
    "img": null,
-   "price": 1369,
+   "price": 1389,
    "market": {
     "ml": {
      "p": 1796.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM2129318104"
     },
     "amz": {
-     "p": 1596.61,
+     "p": 1631.86,
      "u": "https://www.amazon.com.mx/dp/B0BVV8RPVQ"
     }
    },
-   "save": 227.61
-  },
-  {
-   "id": "hapaclite",
-   "cat": "mk",
-   "icon": "router",
-   "name": "MikroTik hAP ac lite",
-   "spec": "Router doble banda AC, 5 puertos Fast Ethernet (RB952Ui-5ac2nD)",
-   "img": "img/hapaclite.jpg",
-   "price": 1469,
-   "market": {
-    "ml": {
-     "p": 1716.0,
-     "u": "https://www.mercadolibre.com.mx/p/MLM2130344948"
-    },
-    "amz": {
-     "p": 1474.86,
-     "u": "https://www.amazon.com.mx/dp/B019PCF3QY"
-    }
-   },
-   "save": 5.86
+   "save": 242.86
   },
   {
    "id": "nvr4",
@@ -204,18 +184,18 @@
    "name": "Hikvision NVR 4 canales PoE",
    "spec": "DS-7104NI-Q1/4P(D): grabador IP 4 MP, 4 puertos PoE, 1 bahía de disco",
    "img": "img/nvr4.jpg",
-   "price": 2129,
+   "price": 2149,
    "market": {
     "ml": {
      "p": 2260.0,
      "u": "https://www.mercadolibre.com.mx/up/MLMU3897683634"
     },
     "amz": {
-     "p": 2509.99,
+     "p": 2513.16,
      "u": "https://www.amazon.com.mx/dp/B0CYV5CXZY"
     }
    },
-   "save": 131.0
+   "save": 111.0
   },
   {
    "id": "nvr8",
@@ -224,18 +204,18 @@
    "name": "Hikvision NVR 8 canales PoE 4K",
    "spec": "DS-7608NI-Q1/8P(E): grabador IP 8 MP (4K), 8 puertos PoE, AcuSense",
    "img": "img/nvr8.jpg",
-   "price": 3739,
+   "price": 3789,
    "market": {
     "ml": {
      "p": 4354.0,
      "u": "https://www.mercadolibre.com.mx/up/MLMU5609737342"
     },
     "amz": {
-     "p": 5199.81,
+     "p": 5197.81,
      "u": "https://www.amazon.com.mx/dp/B0GQXY6WNJ"
     }
    },
-   "save": 615.0
+   "save": 565.0
   },
   {
    "id": "kit1080",
@@ -244,18 +224,18 @@
    "name": "Kit HiLook 1080p 4 cámaras",
    "spec": "HL-1080-MC4: DVR 4 canales + 4 cámaras bala metálicas 1080p con accesorios",
    "img": "img/kit1080.jpg",
-   "price": 1709,
+   "price": 1729,
    "market": {
     "ml": {
-     "p": 1999.0,
-     "u": "https://www.mercadolibre.com.mx/p/MLM72089420"
+     "p": 2037.0,
+     "u": "https://www.mercadolibre.com.mx/up/MLMU4111261513"
     },
     "amz": {
-     "p": 1968,
+     "p": 1974,
      "u": "https://www.amazon.com.mx/dp/B0H3XB4YM6"
     }
    },
-   "save": 259
+   "save": 245
   },
   {
    "id": "kit3k",
@@ -264,10 +244,10 @@
    "name": "Kit Hikvision 3K (5 MP) 4 cámaras",
    "spec": "KIT-3K-DL: DVR 4 canales + 4 cámaras bala Dual Light 5 MP con micrófono",
    "img": "img/kit3k.jpg",
-   "price": 3519,
+   "price": 3559,
    "market": {
     "ml": {
-     "p": 4986.0,
+     "p": 5047.0,
      "u": "https://www.mercadolibre.com.mx/up/MLMU4700361299"
     },
     "amz": {
@@ -275,7 +255,7 @@
      "u": "https://www.amazon.com.mx/dp/B0G75262B2"
     }
    },
-   "save": 273
+   "save": 233
   },
   {
    "id": "c410kit",
@@ -284,14 +264,14 @@
    "name": "TP-Link Tapo C410 KIT solar",
    "spec": "Cámara 2K de batería + panel solar, exterior IP65, detección IA",
    "img": "img/c410kit.jpg",
-   "price": 1489,
+   "price": 1509,
    "market": {
     "ml": {
      "p": 1804.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM59323716"
     }
    },
-   "save": 315.0
+   "save": 295.0
   },
   {
    "id": "ml100",
@@ -300,10 +280,10 @@
    "name": "ZKTeco ML100 cerradura inteligente",
    "spec": "Huella, código, tarjeta y Wi-Fi (app ZSmart), cerradura de embutir",
    "img": "img/ml100.jpg",
-   "price": 1799,
+   "price": 1819,
    "market": {
     "ml": {
-     "p": 1809.0,
+     "p": 2231.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM29795179"
     },
     "amz": {
@@ -311,7 +291,7 @@
      "u": "https://www.amazon.com.mx/dp/B0BRYR6L3W"
     }
    },
-   "save": 10.0
+   "save": 365
   },
   {
    "id": "a321",
@@ -320,18 +300,18 @@
    "name": "Cerradura eléctrica Phillips/Assa Abloy 321",
    "spec": "321-DCBI-ABG: cerradura eléctrica de sobreponer, izquierda, con botón",
    "img": "img/a321.jpg",
-   "price": 919,
+   "price": 929,
    "market": {
     "ml": {
      "p": 1194,
      "u": "https://www.mercadolibre.com.mx/p/MLM29408472"
     },
     "amz": {
-     "p": 1217,
+     "p": 1106,
      "u": "https://www.amazon.com.mx/dp/B08876ZTCF"
     }
    },
-   "save": 275
+   "save": 177
   },
   {
    "id": "accessrim",
@@ -340,7 +320,7 @@
    "name": "Cerradura eléctrica AccessPRO",
    "spec": "ACCESSRIM: cerradura eléctrica de exterior con llave, derecha",
    "img": "img/accessrim.jpg",
-   "price": 579,
+   "price": 589,
    "market": {
     "ml": {
      "p": 853.0,
@@ -351,7 +331,7 @@
      "u": "https://www.amazon.com.mx/dp/B0C8LTJNPD"
     }
    },
-   "save": 274.0
+   "save": 264.0
   },
   {
    "id": "hikmag",
@@ -360,18 +340,18 @@
    "name": "Chapa magnética Hikvision 600 lbs",
    "spec": "DS-K4H258S: electroimán 280 kg (617 lbs) para puerta normal, 12 V",
    "img": "img/hikmag.jpg",
-   "price": 669,
+   "price": 679,
    "market": {
     "ml": {
      "p": 841.0,
      "u": "https://www.mercadolibre.com.mx/up/MLMU3293514517"
     },
     "amz": {
-     "p": 1075,
+     "p": 810.91,
      "u": "https://www.amazon.com.mx/dp/B09R42H4QR"
     }
    },
-   "save": 172.0
+   "save": 131.91
   },
   {
    "id": "apmag600",
@@ -380,18 +360,18 @@
    "name": "Chapa magnética AccessPRO 600 lbs LED",
    "spec": "MAG600NLEDV2: electroimán 600 lbs con LED, libre de magnetismo residual",
    "img": "img/apmag600.jpg",
-   "price": 629,
+   "price": 639,
    "market": {
     "ml": {
      "p": 649.0,
      "u": "https://www.mercadolibre.com.mx/up/MLMU5954566754"
     },
     "amz": {
-     "p": 733,
+     "p": 721.79,
      "u": "https://www.amazon.com.mx/dp/B07W4FJX71"
     }
    },
-   "save": 20.0
+   "save": 10.0
   },
   {
    "id": "ym280",
@@ -400,14 +380,14 @@
    "name": "Chapa magnética YLI 280 kg LED",
    "spec": "YM-280N(LED): electroimán 600 lbs con indicador LED, 12/24 V",
    "img": "img/ym280.jpg",
-   "price": 739,
+   "price": 749,
    "market": {
     "ml": {
      "p": 899.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM38040740"
     }
    },
-   "save": 160.0
+   "save": 150.0
   },
   {
    "id": "lm1805",
@@ -416,14 +396,14 @@
    "name": "Electroimán ZKTeco LM-1805 (180 kg)",
    "spec": "Chapa electromagnética 350 lbs para puertas ligeras, 12 V",
    "img": "img/lm1805.jpg",
-   "price": 439,
+   "price": 449,
    "market": {
     "ml": {
      "p": 508.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM39449001"
     }
    },
-   "save": 69.0
+   "save": 59.0
   },
   {
    "id": "mag350",
@@ -432,14 +412,14 @@
    "name": "Chapa magnética AccessPRO 350 lbs LED",
    "spec": "MAG350NLED: electroimán 350 lbs con LED para uso interior",
    "img": "img/mag350.jpg",
-   "price": 659,
+   "price": 669,
    "market": {
     "ml": {
      "p": 949.0,
      "u": "https://www.mercadolibre.com.mx/p/MLM36266205"
     }
    },
-   "save": 290.0
+   "save": 280.0
   },
   {
    "id": "utp6lp",
@@ -448,7 +428,7 @@
    "name": "Bobina UTP Cat6 Linkedpro 305 m",
    "spec": "PRO-CAT-6-PLUSW: cobre, alto desempeño, flexible, certificada UL, blanca",
    "img": "img/s88746.jpg",
-   "price": 3949,
+   "price": 3999,
    "market": {},
    "save": 0,
    "catalog": true
@@ -460,7 +440,7 @@
    "name": "Bobina UTP Cat6 exterior Linkedpro 305 m",
    "spec": "PRO-CAT-6-EXT-LITEW: para exterior, certificada UL, blanca",
    "img": "img/s166499.jpg",
-   "price": 4219,
+   "price": 4269,
    "market": {},
    "save": 0,
    "catalog": true
@@ -472,7 +452,7 @@
    "name": "Bobina UTP Cat5e Linkedpro 305 m",
    "spec": "PRO-CAT-5E-W: alto rendimiento, certificada UL, blanca",
    "img": "img/s88747.jpg",
-   "price": 2909,
+   "price": 2939,
    "market": {},
    "save": 0,
    "catalog": true
@@ -484,7 +464,7 @@
    "name": "Bobina UTP Cat6 Hikvision 305 m (CCA)",
    "spec": "DS-1LN6U-W/CCA: 24 AWG, uso interior, cobre con aluminio",
    "img": "img/s165752.jpg",
-   "price": 1539,
+   "price": 1549,
    "market": {},
    "save": 0,
    "catalog": true
@@ -496,7 +476,7 @@
    "name": "Bobina UTP Cat6 Ubiquiti UniFi 305 m",
    "spec": "U-CABLE-C6-CMR: riser CMR, 23 AWG, blanca",
    "img": "img/s200424.jpg",
-   "price": 6219,
+   "price": 6299,
    "market": {},
    "save": 0,
    "catalog": true
@@ -508,7 +488,7 @@
    "name": "Bobina UTP Cat5e Saxxon 305 m",
    "spec": "OUTPCAT5E: 100% cobre, bobinado Reelex, gris, interior",
    "img": "img/t10482.jpg",
-   "price": 3329,
+   "price": 3399,
    "market": {},
    "save": 0,
    "catalog": true
@@ -520,7 +500,7 @@
    "name": "Bobina UTP Cat6 Saxxon 305 m",
    "spec": "OUTP6COP305BC: 100% cobre, bobinado Reelex, blanca, interior",
    "img": "img/t12025.jpg",
-   "price": 4019,
+   "price": 4099,
    "market": {},
    "save": 0,
    "catalog": true
@@ -532,7 +512,7 @@
    "name": "Bobina UTP Cat5e Saxxon 305 m (CCA)",
    "spec": "OUTP5ECCA305BC: cobre con aluminio, blanca, interior",
    "img": "img/t11897.jpg",
-   "price": 929,
+   "price": 949,
    "market": {},
    "save": 0,
    "catalog": true
@@ -544,7 +524,7 @@
    "name": "Bobina UTP Cat6 Dahua 305 m",
    "spec": "PFM920I-6UN-C: 100% cobre, blanca, interior",
    "img": "img/t79085.jpg",
-   "price": 4059,
+   "price": 4149,
    "market": {},
    "save": 0,
    "catalog": true
@@ -556,7 +536,7 @@
    "name": "Bobina UTP Cat6 exterior Saxxon 305 m",
    "spec": "OUTP6COP305NE: 100% cobre, cubierta LDPE para exterior",
    "img": "img/t21454.jpg",
-   "price": 4169,
+   "price": 3829,
    "market": {},
    "save": 0,
    "catalog": true
@@ -568,7 +548,7 @@
    "name": "Hikvision DVR 4 canales TurboHD",
    "spec": "DS-7204HGHI-M1/T: 1080p Lite, AcuSense Lite, audio bidireccional",
    "img": "img/s235489.jpg",
-   "price": 789,
+   "price": 799,
    "market": {},
    "save": 0,
    "catalog": true
@@ -592,7 +572,7 @@
    "name": "Hikvision DVR 8 canales 3K Lite",
    "spec": "IDS-7208HQHI-M1/T: 5 MP Lite, + 4 IP, AcuSense, audio bidireccional",
    "img": "img/s240041.jpg",
-   "price": 2269,
+   "price": 2299,
    "market": {},
    "save": 0,
    "catalog": true
@@ -604,7 +584,7 @@
    "name": "Hikvision DVR 4 canales 4K",
    "spec": "IDS-7204HUHI-M1/T: 8 MP, + 4 IP, AcuSense, audio bidireccional",
    "img": "img/s239311.jpg",
-   "price": 2169,
+   "price": 2199,
    "market": {},
    "save": 0,
    "catalog": true
@@ -616,7 +596,7 @@
    "name": "Hikvision DVR 16 canales 3K Lite",
    "spec": "IDS-7216HQHI-M1/XT: 5 MP Lite, + 8 IP, reconocimiento facial",
    "img": "img/s230034.jpg",
-   "price": 3389,
+   "price": 3439,
    "market": {},
    "save": 0,
    "catalog": true
@@ -628,7 +608,7 @@
    "name": "Dahua DVR 4 canales 1080p",
    "spec": "XVR1B04-I/T: WizSense Lite, + 1 IP, audio bidireccional",
    "img": "img/t75775.jpg",
-   "price": 869,
+   "price": 889,
    "market": {},
    "save": 0,
    "catalog": true
@@ -640,7 +620,7 @@
    "name": "Dahua DVR 8 canales 1080p",
    "spec": "XVR1B08-I/T: WizSense Lite, + 2 IP, audio bidireccional",
    "img": "img/t75780.jpg",
-   "price": 1329,
+   "price": 1349,
    "market": {},
    "save": 0,
    "catalog": true
@@ -652,7 +632,7 @@
    "name": "Dahua DVR 4 canales 5 MP Lite",
    "spec": "XVR5104HS-I3/T: WizSense, + 2 IP, audio bidireccional",
    "img": "img/t80985.jpg",
-   "price": 1619,
+   "price": 1649,
    "market": {},
    "save": 0,
    "catalog": true
@@ -664,7 +644,7 @@
    "name": "Dahua DVR 4 canales 4K",
    "spec": "XVR5104HS-4KL-I3/T: WizSense, H.265+, audio bidireccional",
    "img": "img/t83585.jpg",
-   "price": 2319,
+   "price": 2359,
    "market": {},
    "save": 0,
    "catalog": true
@@ -676,7 +656,7 @@
    "name": "Hikvision bala TurboHD 2 MP",
    "spec": "DS-2CE16D0T-ITF(C): 2.8 mm, IR 30 m, metálica, exterior IP67",
    "img": "img/s197091.jpg",
-   "price": 409,
+   "price": 419,
    "market": {},
    "save": 0,
    "catalog": true
@@ -724,7 +704,7 @@
    "name": "Hikvision domo IP 4 MP",
    "spec": "DS-2CD1143G3-LIU: 2.8 mm, IR 30 m, PoE, exterior IP67",
    "img": "img/s257189.jpg",
-   "price": 2019,
+   "price": 2049,
    "market": {},
    "save": 0,
    "catalog": true
@@ -736,7 +716,7 @@
    "name": "Epcom domo IP 4 MP",
    "spec": "XD41H: 2.8 mm, IR 30 m, PoE, antivandálico IK10",
    "img": "img/s200319.jpg",
-   "price": 959,
+   "price": 969,
    "market": {},
    "save": 0,
    "catalog": true
@@ -748,7 +728,7 @@
    "name": "Dahua bala HDCVI 2 MP",
    "spec": "HAC-B1A21N-U: 2.8 mm, IR 30 m, exterior IP67",
    "img": "img/t64615.jpg",
-   "price": 279,
+   "price": 289,
    "market": {},
    "save": 0,
    "catalog": true
@@ -760,7 +740,7 @@
    "name": "Dahua bala Full Color 1080p",
    "spec": "HAC-HFW1209CN-A-LED: micrófono integrado, luz visible 30 m",
    "img": "img/t69215.jpg",
-   "price": 449,
+   "price": 459,
    "market": {},
    "save": 0,
    "catalog": true
@@ -772,7 +752,7 @@
    "name": "Dahua bala HDCVI 5 MP",
    "spec": "HAC-B2A51N-U: 2.8 mm, IR 30 m, metálica, IP67",
    "img": "img/t63845.jpg",
-   "price": 509,
+   "price": 529,
    "market": {},
    "save": 0,
    "catalog": true
@@ -784,7 +764,7 @@
    "name": "Dahua bala IP 4 MP",
    "spec": "IPC-B1E40: 2.8 mm, IR 30 m, PoE, H.265+",
    "img": "img/t65025.jpg",
-   "price": 899,
+   "price": 919,
    "market": {},
    "save": 0,
    "catalog": true
@@ -796,7 +776,7 @@
    "name": "Dahua bala Wi-Fi 3 MP",
    "spec": "F3D-IL: iluminación dual, detecta personas y vehículos, micrófono",
    "img": "img/t84615.jpg",
-   "price": 689,
+   "price": 699,
    "market": {},
    "save": 0,
    "catalog": true
@@ -808,7 +788,7 @@
    "name": "Ubiquiti antena sectorial 5 GHz 19 dBi",
    "spec": "AM-5G19-120: airMAX, 120°, para estación base",
    "img": "img/s10413.jpg",
-   "price": 3359,
+   "price": 3429,
    "market": {},
    "save": 0,
    "catalog": true
@@ -820,7 +800,7 @@
    "name": "Ubiquiti antena sectorial 5 GHz 16 dBi",
    "spec": "AM-5G16-120: airMAX, 120°, para estación base",
    "img": "img/t8545.jpg",
-   "price": 2319,
+   "price": 2369,
    "market": {},
    "save": 0,
    "catalog": true
@@ -832,7 +812,7 @@
    "name": "Ubiquiti antena omni 5 GHz 13 dBi",
    "spec": "AMO-5G13: omnidireccional airMAX 2x2 MIMO",
    "img": "img/t8306.jpg",
-   "price": 4239,
+   "price": 4329,
    "market": {},
    "save": 0,
    "catalog": true
@@ -844,7 +824,7 @@
    "name": "Ubiquiti RocketDish 5 GHz 30 dBi",
    "spec": "RD-5G30-LW: antena direccional para enlaces de largo alcance",
    "img": "img/t8288.jpg",
-   "price": 2529,
+   "price": 2579,
    "market": {},
    "save": 0,
    "catalog": true
@@ -856,7 +836,7 @@
    "name": "Ruijie antena sectorial 5 GHz 16 dBi",
    "spec": "RG-ANT16S-120: 120°, MIMO 2x2, hasta 5 km",
    "img": "img/s224174.jpg",
-   "price": 1789,
+   "price": 1809,
    "market": {},
    "save": 0,
    "catalog": true
@@ -868,7 +848,7 @@
    "name": "TXPRO antena parabólica 5 GHz 28 dBi",
    "spec": "TXP-D4865-28: 4.8–6.5 GHz, conectores RP-SMA",
    "img": "img/s153445.jpg",
-   "price": 3889,
+   "price": 3939,
    "market": {},
    "save": 0,
    "catalog": true
@@ -880,7 +860,7 @@
    "name": "TXPRO radio portátil DMR VHF",
    "spec": "TX790V: 136–174 MHz, 64 canales, cifrado, 5 W",
    "img": "img/s218195.jpg",
-   "price": 1059,
+   "price": 1079,
    "market": {},
    "save": 0,
    "catalog": true
@@ -892,7 +872,7 @@
    "name": "ICOM radio portátil doble banda",
    "spec": "IC-T10: VHF/UHF, 5 W en ambas bandas",
    "img": "img/s216555.jpg",
-   "price": 5419,
+   "price": 5489,
    "market": {},
    "save": 0,
    "catalog": true
@@ -904,7 +884,7 @@
    "name": "Ubiquiti NanoStation Loco M2",
    "spec": "LOCOM2: airMAX 2.4 GHz, antena 8 dBi, hasta 150 Mbps",
    "img": "img/t8168.jpg",
-   "price": 1219,
+   "price": 1239,
    "market": {},
    "save": 0,
    "catalog": true
@@ -916,7 +896,7 @@
    "name": "Ubiquiti NanoStation M2",
    "spec": "NSM2: airMAX 2.4 GHz, antena 11 dBi, 2 puertos, hasta 150 Mbps",
    "img": "img/t8170.jpg",
-   "price": 2329,
+   "price": 2359,
    "market": {},
    "save": 0,
    "catalog": true
@@ -928,7 +908,7 @@
    "name": "Ubiquiti NanoStation M5",
    "spec": "NSM5: airMAX 5 GHz, antena 16 dBi, 2 puertos, hasta 150 Mbps",
    "img": "img/t8171.jpg",
-   "price": 2329,
+   "price": 2379,
    "market": {},
    "save": 0,
    "catalog": true
@@ -940,7 +920,7 @@
    "name": "Ubiquiti NanoStation Loco M5",
    "spec": "LOCOM5: airMAX 5 GHz, antena 13 dBi, hasta 150 Mbps",
    "img": "img/t8174.jpg",
-   "price": 1919,
+   "price": 1949,
    "market": {},
    "save": 0,
    "catalog": true
@@ -952,7 +932,7 @@
    "name": "Ubiquiti LiteBeam M5",
    "spec": "LBE-M5-23: airMAX 5 GHz, antena 23 dBi, hasta 100 Mbps",
    "img": "img/t8332.jpg",
-   "price": 1099,
+   "price": 1119,
    "market": {},
    "save": 0,
    "catalog": true
@@ -964,7 +944,7 @@
    "name": "Ubiquiti NanoBeam 5AC Gen2",
    "spec": "NBE-5AC-GEN2: airMAX AC 5 GHz, antena 19 dBi, hasta 450 Mbps",
    "img": "img/t10569.jpg",
-   "price": 2849,
+   "price": 2899,
    "market": {},
    "save": 0,
    "catalog": true
@@ -976,7 +956,7 @@
    "name": "Ubiquiti PowerBeam 5AC ISO Gen2",
    "spec": "PBE-5AC-ISO-GEN2: airMAX AC 5 GHz, 25 dBi, aislamiento de ruido, 450 Mbps",
    "img": "img/t21856.jpg",
-   "price": 3969,
+   "price": 4049,
    "market": {},
    "save": 0,
    "catalog": true
@@ -988,7 +968,7 @@
    "name": "Ubiquiti LiteAP AC 120°",
    "spec": "LAP-120: punto de acceso airMAX AC 5 GHz, sectorial 16 dBi 120°",
    "img": "img/t9323.jpg",
-   "price": 2629,
+   "price": 2669,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1000,7 +980,7 @@
    "name": "Ubiquiti LiteAP GPS 90°",
    "spec": "LAP-GPS: punto de acceso airMAX AC 5 GHz, sectorial 17 dBi 90°, sincronía GPS",
    "img": "img/t33865.jpg",
-   "price": 3079,
+   "price": 3129,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1012,7 +992,7 @@
    "name": "Ubiquiti IsoStation 5AC",
    "spec": "IS-5AC: airMAX AC 5 GHz, sectorial 14 dBi 45°, hasta 450 Mbps",
    "img": "img/t10716.jpg",
-   "price": 3409,
+   "price": 3449,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1024,7 +1004,7 @@
    "name": "Ubiquiti Rocket 5AC Lite",
    "spec": "R5AC-LITE: radio conectorizado airMAX AC 5 GHz, 27 dBm, hasta 500 Mbps",
    "img": "img/t8175.jpg",
-   "price": 3379,
+   "price": 3419,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1036,7 +1016,7 @@
    "name": "Ubiquiti Rocket Prism 5AC Gen2",
    "spec": "RP-5AC-GEN2: radio conectorizado airMAX AC Prism 5 GHz, hasta 500 Mbps",
    "img": "img/t10723.jpg",
-   "price": 7069,
+   "price": 7199,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1048,7 +1028,7 @@
    "name": "Ubiquiti LTU Pro",
    "spec": "LTU-PRO: cliente PtMP LTU 5 GHz, antena 24 dBi",
    "img": "img/t41096.jpg",
-   "price": 5149,
+   "price": 5239,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1060,7 +1040,7 @@
    "name": "Ubiquiti airFiber 5XHD",
    "spec": "AF-5XHD: radio carrier 5 GHz conectorizado, hasta 1 Gbps",
    "img": "img/t19057.jpg",
-   "price": 10739,
+   "price": 10869,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1072,7 +1052,7 @@
    "name": "Ubiquiti airFiber 5XHD kit 30 dBi",
    "spec": "AF-5XHD-30-S45: radio AF-5XHD + antena 30 dBi, enlace PtP hasta 500 Mbps",
    "img": "img/t63792.jpg",
-   "price": 14649,
+   "price": 14849,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1084,7 +1064,7 @@
    "name": "Ubiquiti airFiber 5XHD kit 34 dBi",
    "spec": "AF-5XHD-34-S45: radio AF-5XHD + antena 34 dBi, enlace PtP hasta 500 Mbps",
    "img": "img/t63797.jpg",
-   "price": 19289,
+   "price": 19529,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1096,7 +1076,7 @@
    "name": "Ubiquiti airFiber 60 XG",
    "spec": "AF60-XG: radio 60 GHz de largo alcance, hasta 6 Gbps",
    "img": "img/t68275.jpg",
-   "price": 26789,
+   "price": 27289,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1108,7 +1088,7 @@
    "name": "Ubiquiti antena sectorial 2.4 GHz 15 dBi",
    "spec": "AM-2G15-120: airMAX, 120°, compatible con Rocket M2",
    "img": "img/t8176.jpg",
-   "price": 3309,
+   "price": 3369,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1120,7 +1100,7 @@
    "name": "Ubiquiti antena omni 5 GHz 10 dBi",
    "spec": "AMO-5G10: omnidireccional airMAX 2x2 MIMO",
    "img": "img/t14985.jpg",
-   "price": 3229,
+   "price": 3289,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1132,7 +1112,7 @@
    "name": "Ubiquiti UISP Horn 30°",
    "spec": "UISP-HORN: sectorial tipo horn 19.5 dBi, alto aislamiento",
    "img": "img/t63562.jpg",
-   "price": 5459,
+   "price": 5559,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1144,7 +1124,7 @@
    "name": "Ubiquiti RocketDish 5 GHz 34 dBi",
    "spec": "RD-5G34: antena direccional para enlaces de largo alcance",
    "img": "img/t8289.jpg",
-   "price": 6709,
+   "price": 6829,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1156,7 +1136,7 @@
    "name": "Ubiquiti antena airFiber 5 GHz 30 dBi",
    "spec": "AF-5G30-S45: direccional para AF-5X / AF-5XHD",
    "img": "img/t8792.jpg",
-   "price": 3449,
+   "price": 3499,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1168,7 +1148,7 @@
    "name": "Ubiquiti antena airFiber 5 GHz 34 dBi",
    "spec": "AF-5G34-S45: direccional para AF-5X / AF-5XHD",
    "img": "img/t8688.jpg",
-   "price": 8199,
+   "price": 8349,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1204,7 +1184,7 @@
    "name": "TP-Link switch 16 puertos Gigabit",
    "spec": "TL-SG1016D: no administrable, escritorio o rack",
    "img": "img/s141326.jpg",
-   "price": 1329,
+   "price": 1359,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1216,7 +1196,7 @@
    "name": "TP-Link switch 8 puertos Gigabit (4 PoE+)",
    "spec": "TL-SG1008P: 4 puertos PoE+, 64 W, para cámaras IP y APs",
    "img": "img/s141327.jpg",
-   "price": 929,
+   "price": 939,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1228,7 +1208,7 @@
    "name": "TP-Link switch 10 puertos Gigabit (8 PoE+)",
    "spec": "TL-SG1210P: 8 PoE+ + 1 Gigabit + 1 SFP, 63 W",
    "img": "img/s193870.jpg",
-   "price": 1589,
+   "price": 1609,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1240,7 +1220,7 @@
    "name": "TP-Link Omada switch administrable 8 puertos (4 PoE+)",
    "spec": "TL-SG2008P: Gigabit, VLAN, administrable desde la nube Omada",
    "img": "img/s190882.jpg",
-   "price": 2239,
+   "price": 2269,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1252,7 +1232,7 @@
    "name": "TP-Link Tapo C210",
    "spec": "Cámara Wi-Fi 2K (3 MP) robótica 360°, visión nocturna, audio de dos vías",
    "img": "img/s208279.jpg",
-   "price": 549,
+   "price": 559,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1264,7 +1244,7 @@
    "name": "TP-Link Tapo C320WS",
    "spec": "Cámara Wi-Fi exterior 2K (4 MP), visión nocturna a color, IP66",
    "img": "img/s208812.jpg",
-   "price": 999,
+   "price": 1009,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1276,7 +1256,7 @@
    "name": "TP-Link Tapo C520WS",
    "spec": "Cámara Wi-Fi exterior PTZ 2K (4 MP), seguimiento de movimiento, IP65",
    "img": "img/s250364.jpg",
-   "price": 1129,
+   "price": 1139,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1288,7 +1268,7 @@
    "name": "TP-Link Archer C50",
    "spec": "Router Wi-Fi 5 doble banda AC1200, 4 antenas",
    "img": "img/s141355.jpg",
-   "price": 509,
+   "price": 519,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1300,7 +1280,7 @@
    "name": "TP-Link Archer C80",
    "spec": "Router Wi-Fi 5 AC1900 MU-MIMO, puertos Gigabit",
    "img": "img/s185554.jpg",
-   "price": 829,
+   "price": 839,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1312,7 +1292,7 @@
    "name": "TP-Link Omada ER605",
    "spec": "Router VPN multi-WAN Gigabit, administrable desde la nube Omada",
    "img": "img/s200330.jpg",
-   "price": 1309,
+   "price": 1329,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1324,7 +1304,7 @@
    "name": "TP-Link Omada EAP225",
    "spec": "Punto de acceso Wi-Fi AC1350 de techo, PoE, mesh Omada",
    "img": "img/s159391.jpg",
-   "price": 1299,
+   "price": 1329,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1360,7 +1340,7 @@
    "name": "Hikvision bala ColorVu 3K (5 MP) Dual Light",
    "spec": "DS-2CE17K0T-LFS: 2.8 mm, IR y luz blanca 40 m, micrófono",
    "img": "img/s210264.jpg",
-   "price": 669,
+   "price": 679,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1372,7 +1352,7 @@
    "name": "Hikvision turret ColorVu 3K (5 MP)",
    "spec": "DS-2CE70KF0T-MFS: imagen a color 24/7, micrófono integrado",
    "img": "img/s196367.jpg",
-   "price": 649,
+   "price": 659,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1384,7 +1364,7 @@
    "name": "Hikvision turret IP 2 MP Dual Light",
    "spec": "DS-2CD1323G2-LIU: 2.8 mm, IR + luz blanca 30 m, PoE, micrófono",
    "img": "img/s221952.jpg",
-   "price": 1319,
+   "price": 1339,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1396,7 +1376,7 @@
    "name": "Hikvision bala IP 4 MP Protección Activa",
    "spec": "DS-2CD1043G2-LIUF/SL: luz estroboscópica y sirena, PoE, micrófono",
    "img": "img/s222070.jpg",
-   "price": 2169,
+   "price": 2189,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1408,7 +1388,7 @@
    "name": "Hikvision domo IP 4 MP con micrófonos",
    "spec": "DS-2CD2143G2-LIS2U: AcuSense, Dual Light 30 m, 2 micrófonos, PoE",
    "img": "img/s228599.jpg",
-   "price": 2579,
+   "price": 2609,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1420,7 +1400,7 @@
    "name": "Hikvision domo PT IP 4 MP Wi-Fi",
    "spec": "DS-2DE2C400MW-G/E: giro e inclinación, Dual Light, audio de dos vías",
    "img": "img/s226411.jpg",
-   "price": 1469,
+   "price": 1489,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1432,7 +1412,7 @@
    "name": "Hikvision DVR 8 canales 1080p Lite",
    "spec": "DS-7108HGHI-M1/T: TurboHD, H.265+, detección de movimiento 2.0",
    "img": "img/s236955.jpg",
-   "price": 989,
+   "price": 999,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1444,7 +1424,7 @@
    "name": "Hikvision NVR 16 canales PoE 8K",
    "spec": "DS-7616NI-M2/16P: 16 puertos PoE, 2 discos duros, AcuSense",
    "img": "img/s213741.jpg",
-   "price": 17839,
+   "price": 18059,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1456,7 +1436,7 @@
    "name": "Grandstream GRP2601P",
    "spec": "Teléfono IP 2 líneas, PoE, grado operador",
    "img": "img/s192328.jpg",
-   "price": 889,
+   "price": 899,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1468,7 +1448,7 @@
    "name": "Grandstream GRP2602P",
    "spec": "Teléfono IP 2 líneas / 4 cuentas SIP, PoE, codec Opus",
    "img": "img/s187581.jpg",
-   "price": 839,
+   "price": 849,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1480,7 +1460,7 @@
    "name": "Grandstream GRP2612P",
    "spec": "Teléfono IP 4 líneas, pantalla a color 2.4\", PoE",
    "img": "img/s169712.jpg",
-   "price": 1059,
+   "price": 1069,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1492,7 +1472,7 @@
    "name": "Grandstream GXP1625",
    "spec": "Teléfono IP 2 líneas, 3 teclas programables, PoE",
    "img": "img/s77690.jpg",
-   "price": 769,
+   "price": 779,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1504,7 +1484,7 @@
    "name": "Grandstream GXP1630",
    "spec": "Teléfono IP 3 líneas, 8 teclas BLF, puertos Gigabit, PoE",
    "img": "img/s81240.jpg",
-   "price": 1159,
+   "price": 1179,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1516,7 +1496,7 @@
    "name": "Grandstream WP810",
    "spec": "Teléfono IP inalámbrico Wi-Fi, 2 líneas, batería recargable",
    "img": "img/s185726.jpg",
-   "price": 1809,
+   "price": 1829,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1528,7 +1508,7 @@
    "name": "Grandstream DP750",
    "spec": "Estación base DECT VoIP, hasta 5 teléfonos inalámbricos",
    "img": "img/s86817.jpg",
-   "price": 1199,
+   "price": 1209,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1540,7 +1520,7 @@
    "name": "Grandstream DP720",
    "spec": "Teléfono inalámbrico DECT para estación DP750",
    "img": "img/s86818.jpg",
-   "price": 1149,
+   "price": 1169,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1552,7 +1532,7 @@
    "name": "Grandstream conmutador UCM6301",
    "spec": "IP-PBX hasta 500 usuarios y 75 llamadas simultáneas, 1 FXO / 1 FXS",
    "img": "img/s192162.jpg",
-   "price": 6699,
+   "price": 6779,
    "market": {},
    "save": 0,
    "catalog": true
@@ -1564,7 +1544,7 @@
    "name": "Grandstream conmutador UCM6302",
    "spec": "IP-PBX hasta 1000 usuarios y 150 llamadas simultáneas, 2 FXO / 2 FXS",
    "img": "img/s192217.jpg",
-   "price": 8329,
+   "price": 8429,
    "market": {},
    "save": 0,
    "catalog": true
